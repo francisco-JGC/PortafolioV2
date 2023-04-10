@@ -5,8 +5,9 @@
 
     .navigation-item {
       text-transform: uppercase;
-      font-weight: bold;
+      font-weight: 600;
       position: relative;
+      font-size: calc(0.1rem + 1vw);
 
       &::after {
         content: '';
