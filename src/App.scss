@@ -5,6 +5,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Montserrat', sans-serif;
+  color: #fff;
 }
 
 body {
@@ -15,4 +16,15 @@ body {
   -webkit-background-size: cover;
   -webkit-background-repeat: no-repeat;
   -webkit-background-attachment: fixed;
+}
+
+a,
+li {
+  text-decoration: none;
+  list-style: none;
+}
+
+span,
+li {
+  font-size: calc(0.1rem + 1vw);
 }

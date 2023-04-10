@@ -1,7 +1,9 @@
+import { Layout } from '../../../components/Layout'
+
 export const HomePage = () => {
   return (
-    <div>
-      <h1>Home Page</h1>
-    </div>
+    <Layout>
+      <h1></h1>
+    </Layout>
   )
 }
