@@ -1,9 +1,14 @@
 import { Layout } from '../../../components/Layout'
+import { Profile } from '../components/Profile'
+
+import './index.scss'
 
 export const HomePage = () => {
   return (
     <Layout>
-      <h1></h1>
+      <div className="home-page">
+        <Profile />
+      </div>
     </Layout>
   )
 }
