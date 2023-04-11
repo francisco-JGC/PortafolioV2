@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
+import CV from '../../../../assets/cv/CV-Francisco_Garcia-FullStack.pdf'
 import './index.scss'
 
 const variantsDiv = {
@@ -55,7 +56,7 @@ export const Profile = () => {
         </motion.span>
 
         <motion.a
-          href="https://www.google.com"
+          href={CV}
           target="_blank"
           rel="noreferrer"
           className="CV"
