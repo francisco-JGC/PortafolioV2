@@ -28,11 +28,13 @@
     &__name {
       font-size: calc(1.5rem + 1vw);
       font-weight: 800;
+      position: relative;
     }
 
     &__ocupation {
       font-size: calc(0.1rem + 1vw);
       text-transform: capitalize;
+      position: relative;
 
       span {
         color: #696c84;
@@ -42,6 +44,7 @@
 
   &__contact {
     margin-top: 1em;
+    position: relative;
     .contact,
     .CV {
       border: 2px solid #fff;
