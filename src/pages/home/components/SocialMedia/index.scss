@@ -1,0 +1,24 @@
+.social-media {
+  display: flex;
+  gap: 2em;
+
+  span,
+  li {
+    color: #696c84;
+    font-weight: 800;
+  }
+
+  &__list {
+    display: flex;
+    list-style: none;
+
+    li:hover {
+      color: #fff;
+      cursor: pointer;
+    }
+
+    span {
+      margin: 0 0.5em;
+    }
+  }
+}

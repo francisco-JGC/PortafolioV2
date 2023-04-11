@@ -1,0 +1,19 @@
+.my-info {
+  background: #201d30;
+  padding: 2em 2em 1em;
+  border-radius: 2em 2em 0 0;
+
+  p {
+    line-height: 22px;
+  }
+
+  &__header {
+    margin-bottom: 1.5em;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+    span {
+      font-weight: 600;
+    }
+  }
+}
