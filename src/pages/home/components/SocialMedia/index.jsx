@@ -39,6 +39,7 @@ export const SocialMedia = () => {
             initial="hidden"
             animate="visible"
             transition={{ duration: 0.5, delay: item.delay }}
+            onClick={() => window.open(item.url, '_blank')}
           >
             {item.label}
             {index !== ITEMS.length - 1 && <span>|</span>}
