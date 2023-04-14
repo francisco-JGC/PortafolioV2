@@ -1,12 +1,11 @@
 .desc-navigation {
   position: absolute;
-  top: calc((6rem + 3rem));
+  top: 10em;
   right: 5em;
   padding: 1em 2em;
   display: flex;
   flex-direction: column;
   width: 300px;
-  font-size: calc(0.01rem + 1vw);
 
   &__item {
     display: flex;

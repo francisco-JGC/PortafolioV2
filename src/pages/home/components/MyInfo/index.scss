@@ -5,7 +5,6 @@
 
   p {
     line-height: 22px;
-    font-size: calc(0.01rem + 1vw);
   }
 
   &__header {
@@ -15,7 +14,6 @@
     overflow: hidden;
     span {
       font-weight: 600;
-      font-size: calc(0.01rem + 1vw);
     }
   }
 }
