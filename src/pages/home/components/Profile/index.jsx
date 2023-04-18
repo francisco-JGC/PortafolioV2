@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 import CV from '../../../../assets/cv/CV-Francisco_Garcia-FullStack.pdf'
+import { Button } from '../../../../components/button'
 import './index.scss'
 
 const variantsDiv = {
@@ -50,8 +51,8 @@ export const Profile = () => {
           animate="animate"
           transition={variantButton.transition}
         >
-          <Link to="/contact" className="contact">
-            <span>Contacta me</span>
+          <Link to="/contact">
+            <Button>Contáctame</Button>
           </Link>
         </motion.span>
 
@@ -59,16 +60,19 @@ export const Profile = () => {
           href={CV}
           target="_blank"
           rel="noreferrer"
-          className="CV"
           variants={variantButton}
           initial="initial"
           animate="animate"
+          style={{
+            paddingLeft: '1rem',
+            outline: 'none'
+          }}
           transition={{
             ...variantButton.transition,
             delay: variantButton.transition.delay + 0.4
           }}
         >
-          <span>CV</span>
+          <Button>CV</Button>
         </motion.a>
       </div>
     </div>
