@@ -113,7 +113,6 @@ export const Code = () => {
         ,<span className="code-line code-text">'Bootstrap'</span>,
         <span className="code-line code-text">'Diseño responsivo'</span>,
         <span className="code-line code-text">'NestJS'</span>,
-        <span className="code-line code-text">'MongoDB'</span>,
         <span className="code-line code-text">'MySQL'</span>,
       </div>
       <div className="code-line" data-line-nr="21" data-decoration-line="|">

@@ -4,7 +4,7 @@ const ITEMS = [
   { label: 'Inicio', to: '/' },
   { label: 'Sobre mi', to: '/about' },
   { label: 'Proyectos', to: '/projects' },
-  { label: 'Contacta me', to: '/contact' }
+  { label: 'Contáctame', to: '/contact' }
 ]
 
 import './index.scss'
