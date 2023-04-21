@@ -7,6 +7,9 @@
   font-family: 'Montserrat', sans-serif;
   color: #fff;
 }
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   background: url('./assets/images/bg.webp') no-repeat center center fixed;

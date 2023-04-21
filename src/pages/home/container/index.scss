@@ -5,6 +5,7 @@
   justify-content: space-between;
   // the height of the page is the height of the viewport minus the height of the header and the margin-top of the page
   height: calc(100vh - (6em + 3em));
+  padding: 0 5em 0 7em;
 }
 
 .my-info-container {

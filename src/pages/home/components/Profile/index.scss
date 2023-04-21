@@ -5,6 +5,15 @@
   padding: 1em 2em;
   position: relative;
 
+  small {
+    margin-top: -2em;
+    margin-bottom: 1em;
+    font-size: calc(1rem + 1vw);
+    color: #696c84;
+    top: 0;
+    font-family: 'Roboto', sans-serif;
+  }
+
   &__data {
     display: flex;
     flex-direction: column;
@@ -12,29 +21,36 @@
     gap: 0.8em;
     padding: 1em 0;
 
-    &::after {
-      content: '';
-      position: absolute;
-      display: block;
-      width: 0.8%;
-      height: 100%;
-      background: #fff;
-      top: 0;
-      left: 0;
-      border-radius: 20px;
-      margin-left: -2em;
-    }
-
     &__name {
       font-size: calc(1.3rem + 1vw);
-      font-weight: 800;
+      font-weight: 700;
       position: relative;
+
+      p {
+        display: flex;
+        flex-direction: column;
+        gap: 0.3em;
+
+        span:first-child span {
+          color: #09f;
+        }
+
+        span:nth-child(2) {
+          font-size: calc(0.8rem + 1vw);
+
+          span {
+            font-weight: 400;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+              'Lucida Sans', Arial, sans-serif;
+          }
+        }
+      }
     }
 
     &__ocupation {
-      font-size: calc(0.01rem + 1vw);
-      text-transform: capitalize;
+      font-size: calc(0.5rem + 1vw);
       position: relative;
+      margin-top: 1em;
 
       span {
         color: #696c84;

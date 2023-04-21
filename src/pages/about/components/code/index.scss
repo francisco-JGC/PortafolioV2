@@ -1,30 +1,19 @@
 .code-container {
-  margin-left: 4em;
   position: relative;
   margin-top: 4em;
-
-  &::after {
-    content: '';
-    position: absolute;
-    width: 0.2%;
-    // calc the height of the code container, header height, and the margin of the code container
-    height: calc(100vh - (6rem - (3.5rem - 4rem)));
-    background: #696c84;
-    top: -3.5rem;
-    margin: 0 -2em;
-  }
+  padding-top: 6em;
 
   &::before {
-    content: 'Portafolio/index.jsx';
+    content: 'Portafolio/index.ts';
     position: absolute;
-    top: -3em;
+    top: 1em;
     color: #696c84;
-    font-size: calc(0.5em + 1vw);
+    font-size: calc(0.9em + 1vw);
   }
 
   .code-line {
     display: flex;
-    font-size: calc(0.1em + 1vw);
+    font-size: calc(0.2em + 1vw);
     position: relative;
 
     &::before {
@@ -114,12 +103,3 @@
     }
   }
 }
-
-//   Habilidades() {
-//       return [
-//           'HTML5', 'CSS3', 'SCSS', 'Javascript', 'UI/UX', 'Diseños animados', 'Node.js',
-//           'React.js', 'Typescript', 'npm/yarn', 'Git', 'Github', 'Ilustrator', 'Adobe XD',
-//           'Photoshop','Bootstrap', 'Diseño responsivo', '.NET 6', 'NestJS',
-//       ]
-//   }
-// }

@@ -1,5 +1,4 @@
 import './App.scss'
-import { DescNavigation } from './components/DescNavigation'
 import { Layout } from './components/Layout'
 import { AboutPage } from './pages/about'
 import { HomePage } from './pages/home'
@@ -12,7 +11,7 @@ const App = () => {
         <AboutPage />
       </Layout>
 
-      <DescNavigation />
+      {/* <DescNavigation /> */}
     </div>
   )
 }

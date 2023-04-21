@@ -19,6 +19,7 @@ const variantButton = {
 export const Profile = () => {
   return (
     <div className="profile">
+      <small>Inicio {'/>'}</small>
       <div className="profile__data">
         <motion.div
           className="profile__data__name"
@@ -27,7 +28,14 @@ export const Profile = () => {
           animate="animate"
           transition={variantsDiv.transition}
         >
-          <span>Francisco Garcia</span>
+          <p>
+            <span>
+              Hola!, Mi nombre es <span>Francisco Garcia</span>
+            </span>
+            <span>
+              Soy <span>Diseñador</span> y Desarrollador web
+            </span>
+          </p>
         </motion.div>
         <motion.div
           className="profile__data__ocupation"
@@ -39,7 +47,7 @@ export const Profile = () => {
             delay: variantsDiv.transition.delay + 0.4
           }}
         >
-          <span>Desarrollador web full-stack</span>
+          <span>Deja te muestro</span>
         </motion.div>
       </div>
 
