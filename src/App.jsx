@@ -1,16 +1,16 @@
-import { Route, Routes } from 'react-router-dom'
 import './App.scss'
 import { DescNavigation } from './components/DescNavigation'
+import { Layout } from './components/Layout'
 import { AboutPage } from './pages/about'
 import { HomePage } from './pages/home'
 
 const App = () => {
   return (
     <div className="App">
-      <Routes>
-        <Route exact path="/" element={<HomePage />} />
-        <Route path="/about" element={<AboutPage />} />
-      </Routes>
+      <Layout>
+        <HomePage />
+        <AboutPage />
+      </Layout>
 
       <DescNavigation />
     </div>

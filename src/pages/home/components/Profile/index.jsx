@@ -1,5 +1,4 @@
 import { motion } from 'framer-motion'
-import { Link } from 'react-router-dom'
 import CV from '../../../../assets/cv/CV-Francisco_Garcia-FullStack.pdf'
 import { Button } from '../../../../components/button'
 import './index.scss'
@@ -51,9 +50,9 @@ export const Profile = () => {
           animate="animate"
           transition={variantButton.transition}
         >
-          <Link to="/contact">
+          <a to="#contact">
             <Button>Contáctame</Button>
-          </Link>
+          </a>
         </motion.span>
 
         <motion.a

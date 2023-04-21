@@ -1,10 +1,8 @@
-import { Link } from 'react-router-dom'
-
 const ITEMS = [
-  { label: 'Inicio', to: '/' },
-  { label: 'Sobre mi', to: '/about' },
-  { label: 'Proyectos', to: '/projects' },
-  { label: 'Contáctame', to: '/contact' }
+  { label: 'Inicio', to: 'start' },
+  { label: 'Sobre mi', to: 'about' },
+  { label: 'Proyectos', to: 'projects' },
+  { label: 'Contáctame', to: 'contact' }
 ]
 
 import './index.scss'
@@ -15,7 +13,7 @@ export const Navigation = () => {
       <ul className="navigation-list">
         {ITEMS.map((item, index) => (
           <li key={index} className="navigation-item">
-            <Link to={item.to}>{item.label}</Link>
+            <a href={`#${item.to}`}>{item.label}</a>
           </li>
         ))}
       </ul>
