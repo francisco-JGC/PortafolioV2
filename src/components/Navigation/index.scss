@@ -9,6 +9,10 @@
       position: relative;
       font-size: calc(0.01rem + 1vw);
 
+      a {
+        color: #fff;
+      }
+
       &::after {
         content: '';
         position: absolute;

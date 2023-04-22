@@ -15,6 +15,17 @@
     animation: line 2s ease-in-out;
   }
 
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0.9em;
+    left: 12.5em;
+    width: 1em;
+    height: 1em;
+    border: 1px solid #09f;
+    border-radius: 50%;
+  }
+
   @keyframes line {
     0% {
       height: 0;

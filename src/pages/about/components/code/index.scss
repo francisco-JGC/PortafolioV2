@@ -11,6 +11,18 @@
     font-size: calc(0.9em + 1vw);
   }
 
+  &::after {
+    content: '';
+    position: absolute;
+    top: 2.2em;
+    left: -2.55em;
+    width: 1em;
+    height: 1em;
+    border: 1px solid #09f;
+    border-radius: 50%;
+    background: #14121c;
+    z-index: 1;
+  }
   .code-line {
     display: flex;
     font-size: calc(0.2em + 1vw);

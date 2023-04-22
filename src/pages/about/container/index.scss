@@ -1,17 +1,18 @@
 .about-page {
-  background: rgba(26, 21, 39, 0.9);
+  background: #14121c;
   min-height: 100vh;
   padding: 0 15em;
 
   position: relative;
 
-  &::after {
+  &::before {
     content: '';
     position: absolute;
-    top: 0;
+
+    bottom: 0;
+    background: linear-gradient(0deg, #0e0d10, transparent);
+    width: 100%;
     left: 0;
-    background: linear-gradient(90deg, rgb(0, 0, 0, 0.4), transparent);
-    width: 10em;
-    height: 100%;
+    height: 2em;
   }
 }
