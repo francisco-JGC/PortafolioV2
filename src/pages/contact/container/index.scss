@@ -1,5 +1,20 @@
 .contact-page {
-  padding: 5em 15em;
+  padding: 5em 15em 0 15em;
   min-height: 100vh;
   background: #0e0d10;
+  display: flex;
+  flex-wrap: wrap;
+
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 2em 0;
+    border-top: 1px solid #696c84;
+    align-self: flex-end;
+    p {
+      color: #696c84;
+    }
+  }
 }
