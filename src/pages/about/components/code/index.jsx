@@ -63,7 +63,7 @@ export const Code = () => {
         <div className="dot">. . . .</div>
         return <span className="code-indent">[</span>
       </div>
-      <div className="code-line" data-line-nr="11">
+      <div className="code-line" data-line-nr="11" data-aos="zoom-in-left">
         <div className="dot">. . . . . . .</div>
         &#123;
         <span className="code-line code-text data-key" data-decoration-line="|">
