@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 import CV from '../../../../assets/cv/CV-Francisco_Garcia-FullStack.pdf'
-import { Button } from '../../../../components/button'
+import { Button } from '../../../../components/Button'
 import './index.scss'
 
 const variantsDiv = {
@@ -47,7 +47,7 @@ export const Profile = () => {
             delay: variantsDiv.transition.delay + 0.4
           }}
         >
-          <span>Deja te muestro</span>
+          <span>Deja que te enseñe...</span>
         </motion.div>
       </div>
 
