@@ -22,7 +22,7 @@ export const Contact = () => {
       >
         {modalOpen && (
           <Modal modalOpen={modalOpen} handleClose={close}>
-            <FormContact />
+            <FormContact closeModal={close} />
           </Modal>
         )}
       </AnimatePresence>

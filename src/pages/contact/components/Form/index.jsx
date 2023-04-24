@@ -1,11 +1,13 @@
 import { useState } from 'react'
 import { Button } from '../../../../components/Button'
+import { Spinner } from '../../../../components/Spinner'
 import { sendEmail } from '../../../../services/sendEmail'
 import { StepOne, StepThree, StepTwo } from '../StepsForm'
 import './index.scss'
 
-export const FormContact = () => {
+export const FormContact = ({ closeModal }) => {
   const [stepCount, setStepCount] = useState(1)
+  const [loading, setLoading] = useState(false)
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -18,8 +20,11 @@ export const FormContact = () => {
   }
 
   const handleSubmit = async () => {
+    setLoading(true)
     const response = await sendEmail(formData)
-    console.log(response)
+    if (response.status === 200) {
+      closeModal()
+    }
   }
 
   const renderStep = () => {
@@ -63,6 +68,8 @@ export const FormContact = () => {
               </Button>
             )}
           </div>
+
+          <div className="content-spinner">{loading && <Spinner />}</div>
         </div>
       </div>
     </div>
