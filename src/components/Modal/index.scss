@@ -19,3 +19,15 @@
     }
   }
 }
+
+@media (max-width: 768px) {
+  .modal {
+    width: 100%;
+    padding: 1em 0;
+    height: 30%;
+
+    .close-modal {
+      font-size: calc(1rem + 1vw);
+    }
+  }
+}

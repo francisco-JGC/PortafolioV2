@@ -21,7 +21,7 @@
       display: flex;
       flex-wrap: wrap;
 
-      grid-gap: 1em;
+      gap: 1em;
       margin-top: 1em;
 
       i {
@@ -47,6 +47,16 @@
 
 @media (max-width: 768px) {
   .social {
-    width: auto;
+    padding: 2em 0;
+
+    .links {
+      div {
+        gap: 3em;
+        a {
+          width: auto;
+          font-size: calc(0.8em + 1vw);
+        }
+      }
+    }
   }
 }

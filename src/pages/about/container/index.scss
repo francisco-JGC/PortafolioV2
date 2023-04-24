@@ -2,6 +2,7 @@
   background: #14121c;
   min-height: 110vh;
   padding: 0 15em;
+  width: 100%;
 
   position: relative;
 
@@ -14,5 +15,17 @@
     width: 100%;
     left: 0;
     height: 2em;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-page {
+    padding: 0;
+    min-width: 100vw;
+    height: 90vh;
+
+    &::before {
+      display: none;
+    }
   }
 }

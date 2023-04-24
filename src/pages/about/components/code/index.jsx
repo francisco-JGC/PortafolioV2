@@ -114,36 +114,42 @@ export const Code = () => {
       </div>
       <div className="code-line" data-line-nr="18" data-aos="zoom-in-right">
         <div className="dot">. . . . . .</div>
-        <span className="code-line code-text" data-decoration-line="|">
-          'HTML5'
-        </span>
-        ,<span className="code-line code-text">'CSS3'</span>,
-        <span className="code-line code-text">'JavaScript'</span>,
-        <span className="code-line code-text">'UI/UX'</span>,
-        <span className="code-line code-text">'Diseños animados'</span>,
-        <span className="code-line code-text">'Node.js'</span>,
+        <div className="flex">
+          <span className="code-line code-text" data-decoration-line="|">
+            'HTML5'
+          </span>
+          ,<span className="code-line code-text">'CSS3'</span>,
+          <span className="code-line code-text">'JavaScript'</span>,
+          <span className="code-line code-text">'UI/UX'</span>,
+          <span className="code-line code-text">'Diseños animados'</span>,
+          <span className="code-line code-text">'Node.js'</span>,
+        </div>
       </div>
       <div className="code-line" data-line-nr="19" data-aos="zoom-in-left">
         <div className="dot">. . . . . .</div>
-        <span className="code-line code-text" data-decoration-line="|">
-          'ReactJS'
-        </span>
-        ,<span className="code-line code-text">'Typescript'</span>,
-        <span className="code-line code-text">'npm/yarn'</span>,
-        <span className="code-line code-text">'Git'</span>,
-        <span className="code-line code-text">'Github'</span>,
-        <span className="code-line code-text">'Ilustrador'</span>,
-        <span className="code-line code-text">'Adobe XD'</span>,
+        <div className="flex">
+          <span className="code-line code-text" data-decoration-line="|">
+            'ReactJS'
+          </span>
+          ,<span className="code-line code-text">'Typescript'</span>,
+          <span className="code-line code-text">'npm/yarn'</span>,
+          <span className="code-line code-text">'Git'</span>,
+          <span className="code-line code-text">'Github'</span>,
+          <span className="code-line code-text">'Ilustrador'</span>,
+          <span className="code-line code-text">'Adobe XD'</span>,
+        </div>
       </div>
       <div className="code-line" data-line-nr="20" data-aos="zoom-in-right">
         <div className="dot">. . . . . .</div>
-        <span className="code-line code-text" data-decoration-line="|">
-          'Photoshop'
-        </span>
-        ,<span className="code-line code-text">'Bootstrap'</span>,
-        <span className="code-line code-text">'Diseño responsivo'</span>,
-        <span className="code-line code-text">'NestJS'</span>,
-        <span className="code-line code-text">'MySQL'</span>,
+        <div className="flex">
+          <span className="code-line code-text" data-decoration-line="|">
+            'Photoshop'
+          </span>
+          ,<span className="code-line code-text">'Bootstrap'</span>,
+          <span className="code-line code-text">'Diseño responsivo'</span>,
+          <span className="code-line code-text">'NestJS'</span>,
+          <span className="code-line code-text">'MySQL'</span>,
+        </div>
       </div>
       <div
         className="code-line"

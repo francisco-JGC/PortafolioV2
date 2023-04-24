@@ -35,3 +35,21 @@
     width: 310px;
   }
 }
+
+@media (max-width: 768px) {
+  .step-layout {
+    font-size: calc(0.5em + 1vw);
+
+    h2 {
+    }
+  }
+
+  .step-one,
+  .step-two,
+  .step-three {
+    input {
+      width: auto;
+      font-size: calc(0.5em + 1vw);
+    }
+  }
+}

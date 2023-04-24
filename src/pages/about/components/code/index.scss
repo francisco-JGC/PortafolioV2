@@ -23,7 +23,8 @@
     background: #14121c;
     z-index: 1;
   }
-  .code-line {
+  .code-line,
+  div {
     display: flex;
     font-size: calc(0.2em + 1vw);
     position: relative;
@@ -112,6 +113,39 @@
 
       font-size: 1.3em;
       text-shadow: none;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .code-container {
+    width: 100vw;
+    padding-left: 5em;
+    &::before {
+      top: 0.5em;
+    }
+    &::after {
+      top: 1.7em;
+    }
+
+    .code-line,
+    div {
+      font-size: 0.9em;
+      text-align: start;
+      margin: 0.1em;
+
+      .flex {
+        display: flex;
+        flex-wrap: wrap;
+      }
+    }
+
+    .code-line::after,
+    .code-text::before,
+    .code-text::after,
+    .data-key::before,
+    .data-key::after {
+      display: none;
     }
   }
 }

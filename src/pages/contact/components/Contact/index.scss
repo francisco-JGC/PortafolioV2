@@ -1,8 +1,18 @@
 .contact {
-  width: 100%;
+  width: 100vw;
 
   span {
     font-size: calc(0.5em + 1vw);
     font-weight: 600;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact {
+    padding: 2em 0;
+
+    span {
+      font-size: calc(1em + 1vw);
+    }
   }
 }
