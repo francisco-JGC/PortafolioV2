@@ -1,5 +1,5 @@
 import './index.scss'
 
-export const Button = ({ children }) => {
+export const CustomButton = ({ children }) => {
   return <button className="button">{children}</button>
 }

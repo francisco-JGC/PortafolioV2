@@ -1,6 +1,5 @@
 import { motion } from 'framer-motion'
 import CV from '../../../../assets/cv/CV-Francisco_Garcia-FullStack.pdf'
-import { Button } from '../../../../components/Button'
 import './index.scss'
 
 const variantsDiv = {
@@ -59,9 +58,9 @@ export const Profile = () => {
           transition={variantButton.transition}
         >
           <a to="#contact">
-            <Button>
+            <CustomButton>
               <span>Contáctame</span>
-            </Button>
+            </CustomButton>
           </a>
         </motion.span>
 
@@ -81,9 +80,9 @@ export const Profile = () => {
             delay: variantButton.transition.delay + 0.4
           }}
         >
-          <Button>
+          <CustomButton>
             <span>CV</span>
-          </Button>
+          </CustomButton>
         </motion.a>
       </div>
     </div>

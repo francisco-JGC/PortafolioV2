@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import { Button } from '../../../../components/Button'
 import { Spinner } from '../../../../components/Spinner'
 import { sendEmail } from '../../../../services/sendEmail'
 import { StepOne, StepThree, StepTwo } from '../StepsForm'
@@ -53,19 +52,19 @@ export const FormContact = ({ closeModal }) => {
             </div>
 
             {stepCount < 3 ? (
-              <Button
+              <CustomButton
                 className="form-contact__container__body__buttons__next"
                 onClick={nextStep}
               >
                 Siguiente <i className="fas fa-arrow-right" />
-              </Button>
+              </CustomButton>
             ) : (
-              <Button
+              <CustomButton
                 className="form-contact__container__body__buttons__next"
                 onClick={handleSubmit}
               >
                 Enviar <i className="fas fa-paper-plane" />
-              </Button>
+              </CustomButton>
             )}
           </div>
 

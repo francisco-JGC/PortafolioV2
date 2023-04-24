@@ -1,6 +1,6 @@
 import { AnimatePresence } from 'framer-motion'
 import { useState } from 'react'
-import { Button } from '../../../../components/Button'
+import { CustomButton } from '../../../../components/CustomButton'
 import { Modal } from '../../../../components/Modal'
 import { FormContact } from '../Form'
 import './index.scss'
@@ -12,9 +12,9 @@ export const Contact = () => {
 
   return (
     <div className="contact">
-      <Button onClick={() => (modalOpen ? close() : open())}>
+      <CustomButton onClick={() => (modalOpen ? close() : open())}>
         <span>Contactar</span>
-      </Button>
+      </CustomButton>
 
       <AnimatePresence
         initial={false}
