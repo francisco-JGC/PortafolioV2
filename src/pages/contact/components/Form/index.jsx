@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { Button } from '../../../../components/Button'
+import { sendEmail } from '../../../../services/sendEmail'
 import { StepOne, StepThree, StepTwo } from '../StepsForm'
 import './index.scss'
 
@@ -16,8 +17,9 @@ export const FormContact = () => {
     setStepCount(stepCount + 1)
   }
 
-  const handleSubmit = () => {
-    console.log(formData)
+  const handleSubmit = async () => {
+    const response = await sendEmail(formData)
+    console.log(response)
   }
 
   const renderStep = () => {
