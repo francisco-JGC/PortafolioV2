@@ -18,9 +18,9 @@
 
     div {
       // grid responsive
-      display: grid;
-      max-width: 700px;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      display: flex;
+      flex-wrap: wrap;
+
       grid-gap: 1em;
       margin-top: 1em;
 
@@ -29,6 +29,8 @@
       }
 
       a {
+        display: inline-block;
+        width: 200px;
         color: #5918df;
         text-decoration: none;
         font-size: calc(0.5rem + 1vw);
@@ -40,5 +42,11 @@
         }
       }
     }
+  }
+}
+
+@media (max-width: 768px) {
+  .social {
+    width: auto;
   }
 }

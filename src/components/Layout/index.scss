@@ -38,3 +38,16 @@
     }
   }
 }
+
+// responsive
+@media (max-width: 768px) {
+  .layout {
+    &::after {
+      left: 3.5em;
+    }
+
+    &::before {
+      left: 3em;
+    }
+  }
+}

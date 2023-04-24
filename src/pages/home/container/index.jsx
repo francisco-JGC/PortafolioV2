@@ -7,7 +7,6 @@ export const HomePage = () => {
     <div className="home-page" id="start">
       <div className="home-page">
         <Profile />
-        <div className="my-info-container"></div>
       </div>
     </div>
   )

@@ -82,3 +82,48 @@
     }
   }
 }
+
+@media (max-width: 768px) {
+  .profile {
+    padding: 1em 0;
+    gap: 1em;
+    margin-left: 4.5em;
+    width: 100%;
+
+    small {
+      font-size: calc(1.3rem + 1vw);
+    }
+
+    &__data {
+      gap: 0.5em;
+      margin-top: 3em;
+
+      &__name {
+        font-size: calc(1.8rem + 1vw);
+
+        p {
+          span:nth-child(2) {
+            margin-top: 1em;
+            font-size: calc(1rem + 1vw);
+          }
+        }
+      }
+
+      &__ocupation {
+        font-size: calc(0.8rem + 1vw);
+      }
+    }
+
+    &__contact {
+      margin-top: 10em;
+      span {
+        font-size: calc(0.8rem + 1vw);
+      }
+
+      .contact,
+      .CV {
+        padding: 0.5em 0.5em;
+      }
+    }
+  }
+}

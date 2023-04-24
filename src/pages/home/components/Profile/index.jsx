@@ -59,7 +59,9 @@ export const Profile = () => {
           transition={variantButton.transition}
         >
           <a to="#contact">
-            <Button>Contáctame</Button>
+            <Button>
+              <span>Contáctame</span>
+            </Button>
           </a>
         </motion.span>
 
@@ -79,7 +81,9 @@ export const Profile = () => {
             delay: variantButton.transition.delay + 0.4
           }}
         >
-          <Button>CV</Button>
+          <Button>
+            <span>CV</span>
+          </Button>
         </motion.a>
       </div>
     </div>

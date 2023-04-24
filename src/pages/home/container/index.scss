@@ -13,3 +13,13 @@
   width: 70%;
   align-self: center;
 }
+
+@media (max-width: 768px) {
+  .home-page {
+    padding: 0;
+  }
+
+  .my-info-container {
+    width: 100%;
+  }
+}
