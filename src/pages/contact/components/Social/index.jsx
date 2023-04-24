@@ -35,15 +35,7 @@ export const Social = () => {
         <h3>Buscame en:</h3>
         <div>
           {SOCIAL_ITEMS.map((item, index) => (
-            <a
-              key={index}
-              href={item.url}
-              target="_blank"
-              rel="noreferrer"
-              data-aos={item.animation}
-              data-aos-offset={item.offset}
-              data-aos-easing={item.easing}
-            >
+            <a key={index} href={item.url} target="_blank" rel="noreferrer">
               <i className={item.icon} />
               <span>{item.name}</span>
             </a>
