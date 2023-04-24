@@ -36,7 +36,8 @@ export const Modal = ({ handleClose, children }) => {
         exit="exit"
       >
         {children}
-        <button onClick={handleClose}>close</button>
+
+        <i className="fas fa-times close-modal" onClick={handleClose} />
       </motion.div>
     </Backdrop>
   )
