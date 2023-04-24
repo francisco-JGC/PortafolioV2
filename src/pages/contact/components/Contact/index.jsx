@@ -2,9 +2,10 @@ import { AnimatePresence } from 'framer-motion'
 import { useState } from 'react'
 import { Button } from '../../../../components/Button'
 import { Modal } from '../../../../components/Modal'
+import { FormContact } from '../Form'
 import './index.scss'
 
-export const ContactForm = () => {
+export const Contact = () => {
   const [modalOpen, setModalOpen] = useState(false)
   const close = () => setModalOpen(false)
   const open = () => setModalOpen(true)
@@ -21,7 +22,7 @@ export const ContactForm = () => {
       >
         {modalOpen && (
           <Modal modalOpen={modalOpen} handleClose={close}>
-            <span>hola</span>
+            <FormContact />
           </Modal>
         )}
       </AnimatePresence>
