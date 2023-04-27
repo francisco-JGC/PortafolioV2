@@ -21,7 +21,7 @@
   .about-page {
     padding: 0;
     min-width: 100vw;
-    height: 90vh;
+    min-height: 90vh;
 
     &::before {
       display: none;

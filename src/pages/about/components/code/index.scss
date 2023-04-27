@@ -119,8 +119,8 @@
 
 @media (max-width: 768px) {
   .code-container {
-    width: 80vw;
-    padding-left: 5em;
+    width: 100vw;
+    padding-left: 4.5em;
     &::before {
       top: 3em;
       font-size: calc(0.7em + 1vw);
@@ -134,6 +134,10 @@
       font-size: 0.9em;
       text-align: start;
       margin: 0.1em;
+
+      &::before {
+        margin: 0 -3rem;
+      }
 
       .flex {
         display: flex;

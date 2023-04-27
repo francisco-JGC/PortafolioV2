@@ -30,7 +30,7 @@ const SOCIAL_ITEMS = [
 export const Social = () => {
   return (
     <div className="social">
-      <span>Contact {'/>'}</span>
+      <span>Contacto {'/>'}</span>
       <div className="links">
         <h3>Buscame en:</h3>
         <div>

@@ -90,7 +90,8 @@
     margin-left: 4.5em;
 
     small {
-      font-size: calc(1.3rem + 1vw);
+      font-size: calc(1rem + 1vw);
+      margin: 0;
     }
 
     &__data {

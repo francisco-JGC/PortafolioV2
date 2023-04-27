@@ -78,9 +78,7 @@ export const Code = () => {
           '2020-2022'
         </span>
         :{' '}
-        <span className="code-line code-text">
-          'Desarrollador Web Full-Stack'
-        </span>{' '}
+        <span className="code-line code-text">'Desarrollador Full-Stack'</span>{' '}
         &#125;
       </div>
       <div
