@@ -1,0 +1,22 @@
+.project-pages {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #1a1527;
+  margin-bottom: -4em;
+  padding: 2em 15em;
+  color: white;
+
+  span {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+    margin-top: 1em;
+    font-size: calc(0.3rem + 1vw);
+    color: #696c84;
+    position: relative;
+  }
+
+  &__container {
+    margin-top: 3em;
+  }
+}
