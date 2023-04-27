@@ -1,0 +1,80 @@
+.project-pages__container__item {
+  width: 410px;
+  height: 230px;
+  position: relative;
+  cursor: pointer;
+  transform-style: preserve-3d;
+  transition: all 0.3s ease-in-out;
+
+  &__image {
+    width: 100%;
+    height: 100%;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      position: relative;
+    }
+
+    &__shadow {
+      content: '';
+      position: absolute;
+      top: 16px;
+      left: 0;
+      width: 20%;
+      height: 86%;
+      background: linear-gradient(
+        90deg,
+        rgba(0, 0, 0, 0.7) 0%,
+        rgba(0, 0, 0, 0) 100%
+      );
+    }
+  }
+
+  &__overlay {
+    position: absolute;
+    top: 6%;
+    left: -5em;
+    width: 30%;
+    height: 87%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 0 1em;
+
+    .name {
+      color: #fff !important;
+      font-weight: 600;
+
+      &:nth-child(1) {
+        font-size: 1.5em;
+        padding-bottom: 0.5em;
+        border-bottom: 3px solid #fff;
+      }
+    }
+
+    div {
+      span,
+      i {
+        font-size: 1em;
+        opacity: 0.6;
+        font-weight: 600;
+        transition: all 0.3s ease-in-out;
+
+        perspective: 1500px;
+      }
+      i {
+        margin-top: 0.3em;
+      }
+
+      span {
+        margin: 0;
+      }
+    }
+  }
+
+  &:hover &__overlay div i {
+    transform: translateX(0.5em);
+  }
+}
