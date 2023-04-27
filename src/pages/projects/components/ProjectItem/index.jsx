@@ -1,27 +1,17 @@
-import { useRef } from 'react'
 import './index.scss'
 
-export const ProjectItem = ({ image, numberList, link, name, style }) => {
-  const card = useRef(null)
-
-  const onMouseMove = (e) => {
-    const xAxis = (window.innerWidth / 2 - e.pageX) / 25
-    const yAxis = (window.innerHeight / 2 - e.pageY) / 25
-    card.current.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`
-  }
-
-  const onMouseLeave = () => {
-    card.current.style.transform = `rotateY(0deg) rotateX(0deg)`
-    card.current.style.transition = 'all 0.5s ease'
-  }
-
+export const ProjectItem = ({
+  image,
+  numberList,
+  link,
+  name,
+  style,
+  orientation
+}) => {
   return (
     <div
-      className="project-pages__container__item"
+      className={`project-pages__container__item ${orientation}`}
       style={style}
-      ref={card}
-      onMouseMove={onMouseMove}
-      onMouseLeave={onMouseLeave}
     >
       <div className="project-pages__container__item__image">
         <img src={image} alt={name} />

@@ -119,10 +119,11 @@
 
 @media (max-width: 768px) {
   .code-container {
-    width: 100vw;
+    width: 80vw;
     padding-left: 5em;
     &::before {
-      top: 0.5em;
+      top: 3em;
+      font-size: calc(0.7em + 1vw);
     }
     &::after {
       top: 1.7em;

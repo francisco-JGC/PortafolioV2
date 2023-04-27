@@ -75,7 +75,7 @@ export const Code = () => {
         <div className="dot">. . . . . . .</div>
         &#123;
         <span className="code-line code-text data-key" data-decoration-line="|">
-          '2020-2023'
+          '2020-2022'
         </span>
         :{' '}
         <span className="code-line code-text">
