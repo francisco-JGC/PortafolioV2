@@ -4,26 +4,41 @@
   position: relative;
   cursor: pointer;
   transform-style: preserve-3d;
-  transition: all 0.3s ease-in-out;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+  &:hover {
+    .project-pages__container__item__image {
+      transform: scale(1.15);
+      filter: drop-shadow(0 0 0.75rem #000);
+    }
+  }
+
+  &:active {
+    .project-pages__container__item__image {
+      transform: scale(0.8);
+    }
+  }
 
   &__image {
     width: 100%;
     height: 100%;
+    transform: scale(1.1);
+    transition: all 0.3s ease-in-out;
 
     img {
       width: 100%;
       height: 100%;
-      object-fit: contain;
+      object-fit: fill;
       position: relative;
     }
 
     &__shadow {
       content: '';
       position: absolute;
-      top: 16px;
+      top: 0;
       left: 0;
       width: 20%;
-      height: 86%;
+      height: 100%;
       background: linear-gradient(
         90deg,
         rgba(0, 0, 0, 0.7) 0%,
@@ -48,7 +63,7 @@
       font-weight: 600;
 
       &:nth-child(1) {
-        font-size: 1.5em;
+        font-size: calc(0.7rem + 1vw);
         padding-bottom: 0.5em;
         border-bottom: 3px solid #fff;
       }
@@ -57,12 +72,10 @@
     div {
       span,
       i {
-        font-size: 1em;
+        font-size: calc(0.3rem + 1vw);
         opacity: 0.6;
         font-weight: 600;
         transition: all 0.3s ease-in-out;
-
-        perspective: 1500px;
       }
       i {
         margin-top: 0.3em;
@@ -76,5 +89,37 @@
 
   &:hover &__overlay div i {
     transform: translateX(0.5em);
+  }
+}
+
+.vertical {
+  height: 345px;
+  width: 280px;
+
+  .project-pages__container__item__image__shadow {
+    top: 0;
+    height: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .project-pages__container__item {
+    width: 200px;
+    height: 120px;
+    margin: 0 0 0 5em !important;
+
+    &__overlay {
+      div {
+        span,
+        i {
+          font-size: calc(0.6rem + 1vw);
+        }
+      }
+    }
+  }
+  .vertical {
+    width: 160px;
+    height: 225px;
+    margin: 0 0 0 3em !important;
   }
 }
