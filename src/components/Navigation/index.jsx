@@ -1,7 +1,7 @@
 const ITEMS = [
   { label: 'Inicio', to: 'start' },
-  { label: 'Sobre mi', to: 'about' },
   { label: 'Proyectos', to: 'projects' },
+  { label: 'Sobre mi', to: 'about' },
   { label: 'Contáctame', to: 'contact' }
 ]
 

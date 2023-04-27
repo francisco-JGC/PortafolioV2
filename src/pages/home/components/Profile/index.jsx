@@ -58,7 +58,7 @@ export const Profile = () => {
           animate="animate"
           transition={variantButton.transition}
         >
-          <a to="#contact">
+          <a href="#contact">
             <CustomButton>
               <span>Contáctame</span>
             </CustomButton>

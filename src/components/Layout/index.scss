@@ -13,6 +13,7 @@
     background: #5918df;
     border-radius: 20px;
     animation: line 2s ease-in-out;
+    z-index: 1;
   }
 
   &::before {
