@@ -8,6 +8,7 @@ import { Layout } from './components/Layout'
 import { AboutPage } from './pages/about'
 import { ContactPage } from './pages/contact'
 import { HomePage } from './pages/home'
+import { ProjectPages } from './pages/projects'
 
 const App = () => {
   AOS.init()
@@ -18,6 +19,7 @@ const App = () => {
 
       <Layout>
         <HomePage />
+        <ProjectPages />
         <AboutPage />
         <ContactPage />
       </Layout>
