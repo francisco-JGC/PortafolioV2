@@ -14,7 +14,7 @@ export const ALL_PROJECTS = [
     background_image: moniben_store,
     description:
       'Ecommerce de venta de productos donde se puede comprar y vender productos. Cuenta con un panel de administración para gestionar los productos, pedidos, usuarios, etc. Esta platilla puede ser modificada a gusto, y escalable para adaptarse a cualquier tipo de negocio. Y es totalmente responsive.',
-    link: 'https://github.com/francisco-JGC/MONIBEN-STORE',
+    link: 'https://github.com/francisco-JGC/Moniben-Ecommerce-p',
     technologies: [
       'Design',
       'React',
