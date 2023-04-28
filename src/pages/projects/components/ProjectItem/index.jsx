@@ -12,6 +12,7 @@ export const ProjectItem = ({
     <div
       className={`project-pages__container__item ${orientation}`}
       style={style}
+      data-aos="fade-up"
     >
       <div className="project-pages__container__item__image">
         <img src={image} alt={name} />

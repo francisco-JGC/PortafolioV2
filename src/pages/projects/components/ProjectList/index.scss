@@ -2,10 +2,11 @@
   transform-style: preserve-3d;
   z-index: 100;
   position: relative;
+  width: 100%;
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  margin-top: -5em;
+  gap: 1em;
+  flex-wrap: wrap;
 }
 
 @media screen and (max-width: 768px) {

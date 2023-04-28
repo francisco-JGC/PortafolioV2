@@ -1,4 +1,4 @@
-import { chatapp, moniben_light } from './images'
+import { chatapp, moniben_light, napet } from './images'
 
 export const ALL_PROJECTS = [
   {
@@ -12,7 +12,6 @@ export const ALL_PROJECTS = [
     numberList: '00',
     orientation: 'horizontal',
     style: {
-      marginLeft: '-6em',
       filter: 'brightness(70%)'
     }
   },
@@ -25,6 +24,18 @@ export const ALL_PROJECTS = [
     style: {
       filter: 'brightness(70%)',
       marginTop: '10em'
+    }
+  },
+  {
+    id: 3,
+    name: 'NAPET',
+    image: napet,
+    numberList: '02',
+    orientation: 'vertical',
+    style: {
+      filter: 'brightness(70%)',
+      width: '150px',
+      marginTop: '-5em'
     }
   }
 ]

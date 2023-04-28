@@ -5,7 +5,6 @@
   cursor: pointer;
   transform-style: preserve-3d;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  margin-top: -8em;
 
   &:hover {
     .project-pages__container__item__image {
@@ -147,6 +146,7 @@
     width: 200px;
     height: 120px;
     justify-content: space-between;
+    margin: 2em !important;
   }
 
   .vertical {
@@ -181,7 +181,6 @@
   .project-pages__container__item {
     width: 200px;
     height: 120px;
-    margin: 0 0 0 5em !important;
 
     &__overlay {
       div {
@@ -195,6 +194,5 @@
   .vertical {
     width: 160px;
     height: 225px;
-    margin: 0 0 0 3em !important;
   }
 }
