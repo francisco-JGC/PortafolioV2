@@ -6,13 +6,15 @@ export const ProjectItem = ({
   link,
   name,
   style,
-  orientation
+  orientation,
+  onClick
 }) => {
   return (
     <div
       className={`project-pages__container__item ${orientation}`}
       style={style}
       data-aos="fade-up"
+      onClick={onClick}
     >
       <div className="project-pages__container__item__image">
         <img src={image} alt={name} />
