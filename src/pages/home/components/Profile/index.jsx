@@ -47,7 +47,7 @@ export const Profile = () => {
             delay: variantsDiv.transition.delay + 0.4
           }}
         >
-          <span>Deja que te enseñe...</span>
+          <span>Deja que te muestre...</span>
         </motion.div>
       </div>
 
