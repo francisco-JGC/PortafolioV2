@@ -21,7 +21,7 @@
     border: 1px solid #5918df;
     border-radius: 50%;
     background: #14121c;
-    z-index: 1;
+    z-index: 2;
   }
   .code-line,
   div {
@@ -85,7 +85,6 @@
       display: block;
       margin: -5px -1.85em;
       color: rgb(105, 108, 132, 0.5);
-
       font-size: 1.3em;
       text-shadow: none;
       height: 110%;

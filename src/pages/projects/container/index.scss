@@ -5,6 +5,18 @@
   margin-bottom: -4em;
   padding: 2em 15em;
   color: white;
+  position: relative;
+
+  &::before {
+    content: 'WEB';
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-weight: 800;
+    font-size: calc(15rem + 1vw);
+    opacity: 0.03;
+    z-index: 1;
+  }
 
   span {
     display: flex;
@@ -24,6 +36,10 @@
 @media screen and (max-width: 768px) {
   .project-pages {
     padding: 2em 4.5em;
+
+    &::before {
+      font-size: calc(7rem + 1vw);
+    }
 
     span {
       font-size: calc(0.6rem + 1vw);

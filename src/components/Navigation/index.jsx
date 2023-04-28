@@ -7,9 +7,9 @@ const ITEMS = [
 
 import './index.scss'
 
-export const Navigation = () => {
+export const Navigation = ({ showMenu }) => {
   return (
-    <nav className="navigation-container">
+    <nav className={`navigation-container`}>
       <ul className="navigation-list">
         {ITEMS.map((item, index) => (
           <li key={index} className="navigation-item">

@@ -1,10 +1,11 @@
-import { useRef } from 'react'
+import { useRef, useState } from 'react'
 import logo from '../../assets/logo/Chico-Dev-Logo.png'
 import { Navigation } from '../Navigation'
 import './index.scss'
 
 export const Header = () => {
   const headerRef = useRef(null)
+  const [showMenu, setShowMenu] = useState(false)
 
   let lastScrollTop = 0
 
@@ -28,9 +29,12 @@ export const Header = () => {
         <span>CHICO DEV</span>
       </a>
 
-      <Navigation />
+      <Navigation showMenu={showMenu} />
 
-      <div className="bar-menu-container">
+      <div
+        className={`bar-menu-container ${showMenu ? 'active-menu' : ''}`}
+        onClick={() => setShowMenu(!showMenu)}
+      >
         <div className="content">
           <div className="bar-menu__line"></div>
           <div className="bar-menu__line"></div>
