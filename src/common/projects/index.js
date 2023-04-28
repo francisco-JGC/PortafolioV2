@@ -1,4 +1,4 @@
-import { moniben_light } from './images'
+import { chatapp, moniben_light } from './images'
 
 export const ALL_PROJECTS = [
   {
@@ -10,9 +10,21 @@ export const ALL_PROJECTS = [
     Link: 'https://github.com/francisco-JGC/MONIBEN-STORE',
     technologies: ['React.js', 'react-router-dom', 'CSS3', 'JavaScript'],
     numberList: '00',
+    orientation: 'horizontal',
     style: {
       marginLeft: '-6em',
-      filter: 'brightness(80%)'
+      filter: 'brightness(70%)'
+    }
+  },
+  {
+    id: 2,
+    name: 'CHAT APP',
+    image: chatapp,
+    numberList: '01',
+    orientation: 'vertical',
+    style: {
+      filter: 'brightness(70%)',
+      marginTop: '10em'
     }
   }
 ]
