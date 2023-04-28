@@ -13,6 +13,10 @@ export const DescNavigation = () => {
     const header = navigationRef.current
     const scrollTop = window.pageYOffset || document.documentElement.scrollTop
 
+    if (!header) {
+      return
+    }
+
     if (scrollTop > lastScrollTop) {
       header.classList.add('desc-navigation--hide')
     } else {
