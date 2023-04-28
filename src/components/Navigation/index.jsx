@@ -1,11 +1,11 @@
-const ITEMS = [
-  { label: 'Inicio', to: 'start' },
-  { label: 'Proyectos', to: 'projects' },
-  { label: 'Sobre mi', to: 'about' },
-  { label: 'Contáctame', to: 'contact' }
-]
-
 import './index.scss'
+
+export const ITEMS = [
+  { label: 'Inicio', to: 'start', icon: 'fa fa-home' },
+  { label: 'Proyectos', to: 'projects', icon: 'fa fa-code' },
+  { label: 'Sobre mi', to: 'about', icon: 'fa fa-user' },
+  { label: 'Contáctame', to: 'contact', icon: 'fa fa-envelope' }
+]
 
 export const Navigation = ({ showMenu }) => {
   return (

@@ -7,6 +7,7 @@ export const Header = () => {
   const headerRef = useRef(null)
   const [showMenu, setShowMenu] = useState(false)
 
+  const witdhScreen = window.innerWidth
   let lastScrollTop = 0
 
   window.addEventListener('scroll', () => {
@@ -41,6 +42,20 @@ export const Header = () => {
           <div className="bar-menu__line"></div>
         </div>
       </div>
+
+      {showMenu && (
+        <div className="menu-container">
+          {/* mensaje troll */}
+          <div className="menu-container__message">
+            <p>¿Qué haces aquí?</p>
+            {witdhScreen >= 768 ? (
+              <p>El menu esta arriba.</p>
+            ) : (
+              <p>El menu esta a abajo.</p>
+            )}
+          </div>
+        </div>
+      )}
     </header>
   )
 }

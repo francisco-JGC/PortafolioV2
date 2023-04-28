@@ -1,30 +1,42 @@
+import { useRef } from 'react'
+import { ITEMS } from '../Navigation'
 import './index.scss'
 
 export const DescNavigation = () => {
+  const navigationRef = useRef(null)
+
+  const widthScreen = window.innerWidth
+
+  let lastScrollTop = 0
+
+  window.addEventListener('scroll', () => {
+    const header = navigationRef.current
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop
+
+    if (scrollTop > lastScrollTop) {
+      header.classList.add('desc-navigation--hide')
+    } else {
+      header.classList.remove('desc-navigation--hide')
+    }
+
+    lastScrollTop = scrollTop <= 0 ? 0 : scrollTop
+  })
+
+  if (widthScreen >= 768) return null
+
   return (
-    <div className="desc-navigation">
-      <div className="desc-navigation__item">
-        <div className="desc-navigation__item__count">
-          <h1>
-            01/<small>05</small>{' '}
-          </h1>
-        </div>
-        <div className="desc-navigation__item__pages">
-          <div className="desc-navigation__item__count__arrow">
-            <h2>
-              <i className="fa-solid fa-chevron-left"></i>
-            </h2>
-            <h3>I</h3>
-            <h2>
-              <i className="fa-solid fa-chevron-right"></i>
-            </h2>
-          </div>
-        </div>
-      </div>
-      <div className="underline"></div>
-      <div className="desc-navigation__title">
-        <span>Desc Navigation</span>
-      </div>
+    <div className="desc-navigation" ref={navigationRef}>
+      <ul>
+        {ITEMS.map((item, index) => (
+          <li key={index}>
+            <a href={`#${item.to}`}>
+              {' '}
+              {item.label}
+              <i className={item.icon}></i>
+            </a>
+          </li>
+        ))}
+      </ul>
     </div>
   )
 }
