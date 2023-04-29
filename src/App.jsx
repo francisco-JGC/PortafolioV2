@@ -1,7 +1,9 @@
-import './App.scss'
+import { ToastContainer } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 
 import AOS from 'aos'
 import 'aos/dist/aos.css' // You can also use <link> for styles
+import './App.scss'
 
 import { DescNavigation } from './components/DescNavigation'
 import { Header } from './components/Header'
@@ -28,6 +30,7 @@ const App = () => {
 
       <DescNavigation />
       <Info />
+      <ToastContainer />
     </div>
   )
 }

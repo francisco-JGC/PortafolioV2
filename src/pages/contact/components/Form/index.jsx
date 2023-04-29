@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { toast } from 'react-toastify'
 import { CustomButton } from '../../../../components/CustomButton'
 import { Spinner } from '../../../../components/Spinner'
 import { sendEmail } from '../../../../services/sendEmail'
@@ -14,6 +15,16 @@ export const FormContact = ({ closeModal }) => {
     interest: '',
     message: ''
   })
+
+  const notify = () =>
+    toast.success(
+      'Gracias por contactarme! 🤗, te responderé lo más pronto posible. 👋',
+      {
+        theme: 'dark',
+        position: 'bottom-center',
+        autoClose: 3000
+      }
+    )
 
   const shakeOnInvalid = (input) => {
     if (input.classList.contains('onEmptyInput')) return
@@ -59,6 +70,7 @@ export const FormContact = ({ closeModal }) => {
     const response = await sendEmail(formData)
     if (response.status === 200) {
       closeModal()
+      notify()
     }
   }
 
