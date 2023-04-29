@@ -15,12 +15,47 @@ export const FormContact = ({ closeModal }) => {
     message: ''
   })
 
+  const shakeOnInvalid = (input) => {
+    if (input.classList.contains('onEmptyInput')) return
+    if (input.value !== '') return
+
+    input.classList.add('onEmptyInput')
+
+    const interval = setInterval(() => {
+      input.classList.remove('onEmptyInput')
+      clearInterval(interval)
+    }, 1000)
+  }
+
   const nextStep = () => {
+    if (stepCount === 1 || formData.name === '') {
+      const ref = document.querySelector('.step-one input[name="name"]')
+      const refEmail = document.querySelector('.step-one input[name="email"]')
+
+      shakeOnInvalid(ref)
+      shakeOnInvalid(refEmail)
+
+      if (formData.name === '' || formData.email === '') return
+    }
+
+    if (stepCount === 2 && formData.interest === '') {
+      const ref = document.querySelector('.step-two input')
+      shakeOnInvalid(ref)
+      return
+    }
+
     setStepCount(stepCount + 1)
   }
 
   const handleSubmit = async () => {
+    if (stepCount === 3 && formData.message === '') {
+      const ref = document.querySelector('.step-three input')
+
+      shakeOnInvalid(ref)
+      return
+    }
     setLoading(true)
+
     const response = await sendEmail(formData)
     if (response.status === 200) {
       closeModal()
