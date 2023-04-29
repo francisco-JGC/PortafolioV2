@@ -3,7 +3,7 @@ import { useState } from 'react'
 import './index.scss'
 
 export const Info = () => {
-  const [showInfo, setShowInfo] = useState(false)
+  const [showInfo, setShowInfo] = useState(true)
 
   const toggleInfo = () => {
     setShowInfo(!showInfo)
