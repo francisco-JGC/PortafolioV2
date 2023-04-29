@@ -30,7 +30,7 @@ const App = () => {
 
       <DescNavigation />
       <Info />
-      <ToastContainer />
+      <ToastContainer style={{ fontSize: '.9em' }} />
     </div>
   )
 }
