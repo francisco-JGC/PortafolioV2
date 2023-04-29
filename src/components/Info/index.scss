@@ -1,0 +1,63 @@
+.info {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  background: #fff;
+  padding: 1em 1em 1em 2em;
+  cursor: pointer;
+  z-index: 100;
+  transition: all 0.3s ease;
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 1em;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: #5918df;
+  }
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.8);
+  }
+
+  span {
+    font-size: calc(0.01em + 1vw);
+    font-weight: 600;
+    color: #5918df;
+    text-transform: uppercase;
+  }
+
+  .info-container {
+    transition: all 0.3s ease;
+    position: absolute;
+    padding: 1em;
+    left: 0;
+  }
+}
+
+.show {
+  color: #e3e5e5;
+
+  &:focus {
+    color: #e3e5e5;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .info {
+    padding: 0.5em 0.5em 0.5em 1.5em;
+
+    &::before {
+      width: 0.5em;
+    }
+
+    span {
+      font-size: calc(0.4em + 1vw);
+      font-weight: 600;
+      color: #5918df;
+      text-transform: uppercase;
+    }
+  }
+}

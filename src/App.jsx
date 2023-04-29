@@ -5,6 +5,7 @@ import 'aos/dist/aos.css' // You can also use <link> for styles
 
 import { DescNavigation } from './components/DescNavigation'
 import { Header } from './components/Header'
+import { Info } from './components/Info'
 import { Layout } from './components/Layout'
 import { AboutPage } from './pages/about'
 import { ContactPage } from './pages/contact'
@@ -26,6 +27,7 @@ const App = () => {
       </Layout>
 
       <DescNavigation />
+      <Info />
     </div>
   )
 }
