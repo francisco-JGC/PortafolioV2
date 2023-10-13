@@ -2,6 +2,8 @@
   position: relative;
   margin-top: 4em;
   padding-top: 6em;
+  line-height: 1.5em;
+  padding-bottom: 6em;
 
   &::before {
     content: 'Portafolio/index.ts';
@@ -32,15 +34,15 @@
     &::before {
       content: attr(data-line-nr);
       position: absolute;
-      margin: 0 -3.7rem;
+      margin: 0 -4rem;
     }
 
     &::after {
       content: attr(data-decoration-line);
       position: absolute;
-      margin: -5px 0.5em;
+      margin: -5px 0.35em;
       color: rgb(105, 108, 132, 0.5);
-      font-size: 1.3em;
+      font-size: 1.6em;
       text-shadow: none;
     }
 
@@ -72,10 +74,10 @@
     &::before {
       content: attr(data-decoration-line);
       position: absolute;
-      margin: -5px -1.15em;
+      margin: -5px -0.95em;
       color: rgb(105, 108, 132, 0.5);
 
-      font-size: 1.3em;
+      font-size: 1.6em;
       text-shadow: none;
     }
 
@@ -83,9 +85,9 @@
       content: attr(data-decoration-line);
       position: absolute;
       display: block;
-      margin: -5px -1.85em;
+      margin: -5px -1.58em;
       color: rgb(105, 108, 132, 0.5);
-      font-size: 1.3em;
+      font-size: 1.6em;
       text-shadow: none;
       height: 110%;
     }
@@ -97,20 +99,19 @@
     &::before {
       content: attr(data-decoration-line);
       position: absolute;
-      margin: -5px -1.8em;
+      margin: -5px -1.45em;
       color: rgb(105, 108, 132, 0.5);
 
-      font-size: 1.3em;
+      font-size: 1.6em;
       text-shadow: none;
     }
 
     &::after {
       content: attr(data-decoration-line);
       position: absolute;
-      margin: -5px -2.5em;
+      margin: -5px -2.1em;
       color: rgb(105, 108, 132, 0.5);
-
-      font-size: 1.3em;
+      font-size: 1.6em;
       text-shadow: none;
     }
   }
