@@ -1,0 +1,49 @@
+.service-pages {
+  width: 100%;
+  min-height: 100vh;
+  background: #0e0d10;
+
+  margin-bottom: -4em;
+  padding: 2em 15em;
+  color: white;
+  position: relative;
+
+  &::before {
+    content: 'DEV';
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-weight: 800;
+    font-size: calc(15rem + 1vw);
+    opacity: 0.03;
+    z-index: 1;
+  }
+
+  span {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+    margin-top: 1em;
+    font-size: calc(0.3rem + 1vw);
+    color: #696c84;
+    position: relative;
+  }
+
+  &__container {
+    margin-top: 3em;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .service-pages {
+    padding: 2em 4.5em;
+
+    &::before {
+      font-size: calc(7rem + 1vw);
+    }
+
+    span {
+      font-size: calc(0.6rem + 1vw);
+    }
+  }
+}
