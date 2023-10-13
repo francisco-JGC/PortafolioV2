@@ -31,31 +31,6 @@ export const Header = () => {
       </a>
 
       <Navigation showMenu={showMenu} />
-
-      <div
-        className={`bar-menu-container ${showMenu ? 'active-menu' : ''}`}
-        onClick={() => setShowMenu(!showMenu)}
-      >
-        <div className="content">
-          <div className="bar-menu__line"></div>
-          <div className="bar-menu__line"></div>
-          <div className="bar-menu__line"></div>
-        </div>
-      </div>
-
-      {showMenu && (
-        <div className="menu-container">
-          {/* mensaje troll */}
-          <div className="menu-container__message">
-            <p>¿Qué haces aquí?</p>
-            {witdhScreen >= 768 ? (
-              <p>El menu esta arriba.</p>
-            ) : (
-              <p>El menu esta a abajo.</p>
-            )}
-          </div>
-        </div>
-      )}
     </header>
   )
 }
