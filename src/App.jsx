@@ -13,6 +13,7 @@ import { AboutPage } from './pages/about'
 import { ContactPage } from './pages/contact'
 import { HomePage } from './pages/home'
 import { ProjectPages } from './pages/projects'
+import { ServicePages } from './pages/services'
 
 const App = () => {
   AOS.init()
@@ -25,6 +26,7 @@ const App = () => {
         <HomePage />
         <ProjectPages />
         <AboutPage />
+        {/* <ServicePages /> */}
         <ContactPage />
       </Layout>
 
