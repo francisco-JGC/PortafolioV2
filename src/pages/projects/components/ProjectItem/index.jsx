@@ -17,7 +17,14 @@ export const ProjectItem = ({
       onClick={onClick}
     >
       <div className="project-pages__container__item__image">
-        <img src={image} alt={name} />
+        <img
+          src={image}
+          alt={name}
+          loading="lazy"
+          style={{
+            transition: 'all 0.5s ease-in-out'
+          }}
+        />
       </div>
 
       <div className="project-pages__container__item__overlay">
