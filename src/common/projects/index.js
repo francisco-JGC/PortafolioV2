@@ -3,7 +3,9 @@ import {
   moniben_light,
   moniben_store,
   napet,
-  napet_app
+  napet_app,
+  exploraventura,
+  exploraventura_light
 } from './images'
 
 export const ALL_PROJECTS = [
@@ -24,19 +26,42 @@ export const ALL_PROJECTS = [
       'Responsive'
     ],
     numberList: '00',
-    orientation: 'horizontal',
-    style: {
-      filter: 'brightness(70%)'
-    }
+    orientation: 'horizontal'
+    // style: {
+    //   filter: 'brightness(70%)'
+    // }
   },
   {
     id: 2,
+    name: 'ExplorAventura',
+    image: exploraventura_light,
+    background_image: exploraventura,
+    description:
+      'ExplorAventura es una agencia de viajes que ofrece paquetes turisticos a diferentes destinos del mundo. Esta aplicacion fue creada con React, CSS3, JavaScript, HTML5, Responsive.',
+    link: null,
+    technologies: [
+      'React',
+      'CSS3',
+      'JavaScript',
+      'HTML5',
+      'Responsive',
+      'Framer Motion'
+    ],
+    numberList: '01',
+    orientation: 'horizontal'
+    // style: {
+    //   filter: 'brightness(70%)',
+    //   marginTop: '10em'
+    // }
+  },
+  {
+    id: 3,
     name: 'CHAT APP',
     image: chatapp,
     background_image: chatapp,
     description:
       'Chat en tiempo real, donde se puede enviar mensajes de texto, podemos ver un claro ejemplo de como funcionan los sockets para conexion en tiempo real con el servidor y los clientes. Esta aplicación fue creada con React, NodeJS, Express y Socket.io.',
-    numberList: '01',
+    numberList: '02',
     orientation: 'vertical',
     link: 'https://github.com/francisco-JGC/Chat_App-Node-React-Socket.io',
     technologies: [
@@ -46,11 +71,11 @@ export const ALL_PROJECTS = [
       'Socket.io',
       'Neumorphism',
       'SASS'
-    ],
-    style: {
-      filter: 'brightness(70%)',
-      marginTop: '10em'
-    }
+    ]
+    // style: {
+    //   filter: 'brightness(70%)',
+    //   marginTop: '10em'
+    // }
   },
   {
     id: 3,
@@ -61,12 +86,12 @@ export const ALL_PROJECTS = [
       'Napet es una aplicacion movil anterior mente llamada APPGRO, tiene como funcionamiento principal Identificar plagas y enfermedades en las plantas, asi como tambien servir una app para registrar tus mascotas donde podras ver su cuido, alimentacion, actividades, etc.',
     link: null,
     technologies: ['UI/UX', 'Design', 'Adobe XD', 'Adobe Illustrator'],
-    numberList: '02',
-    orientation: 'vertical',
-    style: {
-      filter: 'brightness(70%)',
-      width: '150px',
-      marginTop: '-5em'
-    }
+    numberList: '03',
+    orientation: 'vertical'
+    // style: {
+    //   filter: 'brightness(70%)',
+    //   width: '150px',
+    //   marginTop: '-5em'
+    // }
   }
 ]
