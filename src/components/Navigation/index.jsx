@@ -4,7 +4,7 @@ export const ITEMS = [
   { label: 'Inicio />', to: 'start', icon: 'fa fa-home' },
   { label: 'Proyectos />', to: 'projects', icon: 'fa fa-code' },
   { label: 'Sobre mi />', to: 'about', icon: 'fa fa-user' },
-  { label: 'Servicios />', to: 'services', icon: 'fa fa-cogs' },
+  // { label: 'Servicios />', to: 'services', icon: 'fa fa-cogs' },
   { label: 'Contáctame />', to: 'contact', icon: 'fa fa-envelope' }
 ]
 
