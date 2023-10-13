@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import CV from '../../../../assets/cv/CV-Francisco_Garcia-FullStack.pdf'
+import CV from '../../../../assets/cv/CV-Francisco_Garcia-Front_End-Developer.pdf'
 import { CustomButton } from '../../../../components/CustomButton'
 import './index.scss'
 
