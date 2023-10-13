@@ -26,11 +26,14 @@ export const Info = () => {
         transition={{ duration: 0.5 }}
       >
         <p>
-          Saludos, mi nombre es Francisco Garcia, desarrollador web full stack
-          con amplia experiencia en el diseño y desarrollo de sitios web
-          personalizados desde cero. Mi pasión por la tecnología me ha llevado a
-          mantenerme actualizado y en constante aprendizaje para mejorar mis
-          habilidades y ofrecer soluciones de alta calidad.
+          <strong>+2</strong> años de experiencia como Full stack Front-end
+          Developer. Cuento con conocimientos solidos en el desarrollo Front-End
+          de <strong>React.js, ES6+, HTML, CSS3</strong> Sólida comprensión en
+          los principios de diseño, <strong>UI/ UX</strong>, CSS Avanzado{' '}
+          <strong>(CSS Modules - Sass)</strong> y diseño responsivo. Desarrollo
+          Back-End utilizando <strong>Nest.js, Node.js y Express</strong>,
+          manejo de base de datos relacionales y no relacionales como lo son
+          <strong>MySQL, PostgresSQL, y SQL SERVER.</strong>
         </p>
       </motion.div>
     </div>
