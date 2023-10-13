@@ -15,13 +15,16 @@ export const ProjectList = () => {
   return (
     <div>
       <div className="project-list">
-        {ALL_PROJECTS.map((project) => (
+        {ALL_PROJECTS.map((project, indenx) => (
           <ProjectItem
             {...project}
             key={project.id}
             onClick={() => {
               setItem(project)
               open()
+            }}
+            style={{
+              alignSelf: indenx % 2 === 0 ? 'flex-start' : 'flex-end'
             }}
           />
         ))}
