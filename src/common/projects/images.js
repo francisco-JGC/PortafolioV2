@@ -1,10 +1,10 @@
-import moniben_light from '../../assets/images/MONIBEN-STORE-LIGHT.png'
-import moniben_store from '../../assets/images/MONIBEN-STORE.png'
-import napet_app from '../../assets/images/Napet-app.png'
-import chatapp from '../../assets/images/chatapp.jpg'
-import napet from '../../assets/images/napet.png'
-import exploraventura from '../../assets/images/exploraventuratravel.png'
-import exploraventura_light from '../../assets/images/exploraventuratravel-light.png'
+import moniben_light from '../../assets/images/MONIBEN-STORE-LIGHT.webp'
+import moniben_store from '../../assets/images/MONIBEN-STORE.webp'
+import napet_app from '../../assets/images/Napet-app.webp'
+import chatapp from '../../assets/images/chatapp.webp'
+import napet from '../../assets/images/napet.webp'
+import exploraventura from '../../assets/images/exploraventuratravel.webp'
+import exploraventura_light from '../../assets/images/exploraventuratravel-light.webp'
 
 export {
   moniben_light,
