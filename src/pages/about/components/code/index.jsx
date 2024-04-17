@@ -26,7 +26,7 @@ export const Code = () => {
       <div className="code-line" data-line-nr="6" data-decoration-line="|">
         <div className="dot"> . . . .</div>
         this.<span className="code-indent">localidad</span> ={' '}
-        <span className="code-text">'León, Nicaragua'</span>
+        <span className="code-text">'León - Nicaragua'</span>
       </div>
       <div className="code-line jump" data-line-nr="7">
         <div className="dot">. .</div>
@@ -51,7 +51,7 @@ export const Code = () => {
         </span>
         :{' '}
         <span className="code-line code-text">
-          'Full-Stack Developer en REGXI.SA'
+          'Full-Stack Developer en REGXI S.A.'
         </span>{' '}
         &#125;,
       </div>
@@ -109,7 +109,7 @@ export const Code = () => {
           <span className="code-line code-text">'UI/UX'</span>,
           <span className="code-line code-text">'Diseños animados'</span>,
           <span className="code-line code-text">'Node.js'</span>,
-          <span className="code-line code-text">'NestJS'</span>,
+          <span className="code-line code-text">'Next.js'</span>,
         </div>
       </div>
       <div className="code-line" data-line-nr="20">
@@ -120,7 +120,6 @@ export const Code = () => {
           </span>
           ,<span className="code-line code-text">'Typescript'</span>,
           <span className="code-line code-text">'npm/yarn/pnpm'</span>,
-          <span className="code-line code-text">'NextJS'</span>,
           <span className="code-line code-text">'Git'</span>,
           <span className="code-line code-text">'Github'</span>,
           <span className="code-line code-text">'Ilustrador'</span>,
@@ -148,28 +147,22 @@ export const Code = () => {
         <span className="code-key">&#125;</span>
       </div>
 
-      <div className="code-line" data-line-nr="24">
-        <div className="dot"></div>
-        &#125;
-      </div>
-
-      {/* apartado de Educacion */}
-      <div className="code-line jump" data-line-nr="25">
+      <div className="code-line jump" data-line-nr="24">
         <div className="dot">. .</div>
       </div>
-      <div className="code-line" data-line-nr="26">
+      <div className="code-line" data-line-nr="25">
         <div className="dot">. .</div>
         Educación <span className="code-key">() &#123;</span>
       </div>
-      <div className="code-line" data-line-nr="27" data-decoration-line="|">
+      <div className="code-line" data-line-nr="26" data-decoration-line="|">
         <div className="dot">. . . .</div>
         return <span className="code-indent">[</span>
       </div>
-      <div className="code-line" data-line-nr="28">
+      <div className="code-line" data-line-nr="27">
         <div className="dot">. . . . . . .</div>
         &#123;
         <span className="code-line code-text data-key" data-decoration-line="|">
-          '2018-2022'
+          'Universidad Nacional Autónoma de Nicaragua'
         </span>
         :{' '}
         <span className="code-line code-text">
@@ -177,20 +170,25 @@ export const Code = () => {
         </span>
         &#125;
       </div>
-      <div className="code-line" data-line-nr="30" data-decoration-line="|">
+      <div className="code-line" data-line-nr="28" data-decoration-line="|">
         <div className="dot">. . . .</div>
         <span className="code-line code-indent">]</span>
       </div>
-      <div className="code-line" data-line-nr="31">
+      <div className="code-line" data-line-nr="29">
         <div className="dot">. .</div>
         <span className="code-key">&#125;</span>
       </div>
 
-      <div className="code-line jump" data-line-nr="32">
+      <div className="code-line jump" data-line-nr="30">
         <div className="dot">. .</div>
       </div>
 
-      <div className="code-line" data-line-nr="33">
+      <div className="code-line" data-line-nr="31">
+        <div className="dot"></div>
+        &#125;
+      </div>
+
+      <div className="code-line" data-line-nr="32">
         <div className="dot"></div>
         export default Francisco Garcia
       </div>
