@@ -5,10 +5,31 @@ import {
   napet,
   napet_app,
   exploraventura,
-  exploraventura_light
+  exploraventura_light,
+  newnic,
+  newnic_light
 } from './images'
 
 export const ALL_PROJECTS = [
+  {
+    id: 0,
+    name: 'Newnic.tech',
+    image: newnic_light,
+    background_image: newnic,
+    description:
+      'Pagina web de una empresa de servicios de tecnologia, donde se puede ver los servicios que ofrecen, los proyectos realizados, y un formulario de contacto. Perfectamente estructurada y totalmente responsive. Esta plantilla puede ser modificada a gusto, y escalable para adaptarse a cualquier tipo de negocio. Y es totalmente responsive.',
+    link: 'https://github.com/francisco-JGC/newnic.tech',
+    technologies: [
+      'Design',
+      'SASS',
+      'NextJS 14',
+      'HTML5',
+      'Responsive',
+      'JavaScript'
+    ],
+    numberList: '00',
+    orientation: 'horizontal'
+  },
   {
     id: 1,
     name: 'MONIBEN STORE',
@@ -25,7 +46,7 @@ export const ALL_PROJECTS = [
       'HTML5',
       'Responsive'
     ],
-    numberList: '00',
+    numberList: '01',
     orientation: 'horizontal'
     // style: {
     //   filter: 'brightness(70%)'
@@ -47,31 +68,8 @@ export const ALL_PROJECTS = [
       'Responsive',
       'Framer Motion'
     ],
-    numberList: '01',
-    orientation: 'horizontal'
-    // style: {
-    //   filter: 'brightness(70%)',
-    //   marginTop: '10em'
-    // }
-  },
-  {
-    id: 3,
-    name: 'CHAT APP',
-    image: chatapp,
-    background_image: chatapp,
-    description:
-      'Chat en tiempo real, donde se puede enviar mensajes de texto, podemos ver un claro ejemplo de como funcionan los sockets para conexion en tiempo real con el servidor y los clientes. Esta aplicación fue creada con React, NodeJS, Express y Socket.io.',
     numberList: '02',
-    orientation: 'vertical',
-    link: 'https://github.com/francisco-JGC/Chat_App-Node-React-Socket.io',
-    technologies: [
-      'React',
-      'NodeJS',
-      'Express',
-      'Socket.io',
-      'Neumorphism',
-      'SASS'
-    ]
+    orientation: 'horizontal'
     // style: {
     //   filter: 'brightness(70%)',
     //   marginTop: '10em'
@@ -86,7 +84,7 @@ export const ALL_PROJECTS = [
       'Napet es una aplicacion movil anterior mente llamada APPGRO, tiene como funcionamiento principal Identificar plagas y enfermedades en las plantas, asi como tambien servir una app para registrar tus mascotas donde podras ver su cuido, alimentacion, actividades, etc.',
     link: null,
     technologies: ['UI/UX', 'Design', 'Adobe XD', 'Adobe Illustrator'],
-    numberList: '03',
+    numberList: '04',
     orientation: 'vertical'
     // style: {
     //   filter: 'brightness(70%)',

@@ -5,6 +5,8 @@ import chatapp from '../../assets/images/chatapp.webp'
 import napet from '../../assets/images/napet.webp'
 import exploraventura from '../../assets/images/exploraventuratravel.webp'
 import exploraventura_light from '../../assets/images/exploraventuratravel-light.webp'
+import newnic from '../../assets/images/newnic.webp'
+import newnic_light from '../../assets/images/newnic-light.webp'
 
 export {
   moniben_light,
@@ -13,5 +15,7 @@ export {
   moniben_store,
   napet_app,
   exploraventura,
-  exploraventura_light
+  exploraventura_light,
+  newnic,
+  newnic_light
 }
