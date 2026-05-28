@@ -1,8 +1,9 @@
 import { motion } from 'framer-motion'
+import { createPortal } from 'react-dom'
 import './index.scss'
 
 export const Backdrop = ({ children, onClick }) => {
-  return (
+  return createPortal(
     <motion.div
       className="backdrop"
       onClick={onClick}
@@ -11,6 +12,7 @@ export const Backdrop = ({ children, onClick }) => {
       exit={{ opacity: 0 }}
     >
       {children}
-    </motion.div>
+    </motion.div>,
+    document.body
   )
 }
