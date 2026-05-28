@@ -83,26 +83,22 @@
 @media (max-width: 768px) {
   .show-project {
     flex-direction: column;
-    /* El scroll ocurre aquí, no en el contenedor hijo */
+    /* Todo scrollea junto: imagen completa + contenido */
     height: 100dvh;
     overflow-y: auto;
     overflow-x: hidden;
 
     &__container {
       width: 100%;
-      /* La imagen ocupa máximo 42% de la pantalla → deja espacio para el contenido */
-      height: 42dvh;
+      height: auto;      /* altura natural → imagen completa scrolleable */
       flex-shrink: 0;
-      overflow: hidden;
+      overflow: visible;
 
-      &__image {
-        height: 100%;
-        img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-          object-position: top center;
-        }
+      &__image img {
+        width: 100%;
+        height: auto;    /* proporción real de la imagen */
+        object-fit: contain;
+        display: block;
       }
     }
 
