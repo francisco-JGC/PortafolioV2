@@ -8,6 +8,9 @@
   "description": "Segunda version de mi portafolio personal",
   "version": "0.0.0",
   "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
   "scripts": {
     "dev": "vite --host",
     "build": "vite build",
