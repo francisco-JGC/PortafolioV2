@@ -6,7 +6,7 @@ import { ProjectItem } from '../ProjectItem'
 import { ShowProject } from '../showProject'
 import './index.scss'
 
-const FILTERS = ['TODOS', 'WEB', 'DISEÑO']
+const FILTERS = ['TODOS', 'WEB', 'IA', 'DISEÑO']
 
 export const ProjectList = () => {
   const [modalOpen, setModalOpen] = useState(false)

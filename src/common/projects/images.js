@@ -8,6 +8,9 @@ import exploraventura_light from '../../assets/images/exploraventuratravel-light
 import newnic from '../../assets/images/newnic.webp'
 import newnic_light from '../../assets/images/newnic-light.webp'
 
+import gvidai from '../../assets/images/gvidai.webp'
+import gvidai_light from '../../assets/images/gvidai-light.webp'
+
 export {
   moniben_light,
   chatapp,
@@ -17,5 +20,7 @@ export {
   exploraventura,
   exploraventura_light,
   newnic,
-  newnic_light
+  newnic_light,
+  gvidai,
+  gvidai_light,
 }
