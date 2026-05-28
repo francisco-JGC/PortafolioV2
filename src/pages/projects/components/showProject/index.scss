@@ -10,9 +10,7 @@
     overflow-y: auto;
     flex-shrink: 0;
 
-    &::-webkit-scrollbar {
-      width: 3px;
-    }
+    &::-webkit-scrollbar { width: 3px; }
     &::-webkit-scrollbar-thumb {
       background: rgba(89, 24, 223, 0.5);
       border-radius: 4px;
@@ -20,7 +18,6 @@
 
     &__image {
       width: 100%;
-
       img {
         width: 100%;
         object-fit: contain;
@@ -42,12 +39,8 @@
     overflow-y: auto;
     border-left: 1px solid rgba(89, 24, 223, 0.15);
 
-    &::-webkit-scrollbar {
-      width: 3px;
-    }
-    &::-webkit-scrollbar-thumb {
-      background: rgba(89, 24, 223, 0.4);
-    }
+    &::-webkit-scrollbar { width: 3px; }
+    &::-webkit-scrollbar-thumb { background: rgba(89, 24, 223, 0.4); }
 
     &__technologies {
       display: flex;
@@ -86,15 +79,31 @@
   }
 }
 
+/* ─── Mobile ─── */
 @media (max-width: 768px) {
   .show-project {
     flex-direction: column;
+    /* El scroll ocurre aquí, no en el contenedor hijo */
+    height: 100dvh;
     overflow-y: auto;
+    overflow-x: hidden;
 
     &__container {
       width: 100%;
-      height: auto;
-      overflow: visible;
+      /* La imagen ocupa máximo 42% de la pantalla → deja espacio para el contenido */
+      height: 42dvh;
+      flex-shrink: 0;
+      overflow: hidden;
+
+      &__image {
+        height: 100%;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: top center;
+        }
+      }
     }
 
     &__container__content {
@@ -103,7 +112,11 @@
       position: static;
       border-left: none;
       border-top: 1px solid rgba(89, 24, 223, 0.15);
-      padding: 1.5em;
+      padding: 1.4em 1.2em 5em;
+      overflow: visible;
+
+      &__title { font-size: clamp(1rem, 5vw, 1.3rem); }
+      &__description { font-size: clamp(0.8rem, 3.5vw, 0.9rem); }
     }
   }
 }
