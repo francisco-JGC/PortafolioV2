@@ -1,45 +1,154 @@
 .social {
   color: #fff;
+  padding-top: 1rem;
 
-  span:first-child {
-    font-size: calc(0.7em + 1vw);
-    color: #696c84;
-    position: relative;
+  small {
+    font-size: clamp(0.65rem, 1vw, 0.82rem);
+    color: var(--purple, #5918df);
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 1rem;
   }
 
-  .links {
-    margin-top: 5em;
+  h2 {
+    font-size: clamp(2rem, 4.5vw, 3.8rem);
+    font-weight: 800;
+    line-height: 1.05;
+    margin-bottom: 1.2rem;
+    letter-spacing: -0.02em;
 
-    h3 {
-      font-family: 'Roboto', sans-serif;
-      margin-bottom: 1em;
-      font-weight: 400;
+    span {
+      background: linear-gradient(135deg, var(--purple), var(--blue-end, #4ce3f7));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+  }
+
+  &__description {
+    font-size: clamp(0.85rem, 1.2vw, 1rem);
+    color: rgba(255, 255, 255, 0.5);
+    line-height: 1.7;
+    max-width: 420px;
+    margin-bottom: 2rem;
+  }
+
+  &__email {
+    display: flex;
+    align-items: center;
+    gap: 0.8em;
+    margin-bottom: 2.5rem;
+
+    i {
+      color: var(--purple, #5918df);
+      font-size: 1rem;
     }
 
-    div {
-      // grid responsive
+    a {
+      color: rgba(255, 255, 255, 0.75);
+      font-size: clamp(0.85rem, 1.1vw, 0.95rem);
+      font-weight: 500;
+      transition: color 0.2s ease;
+      border-bottom: 1px solid rgba(89, 24, 223, 0.3);
+      padding-bottom: 1px;
+
+      &:hover {
+        color: #fff;
+        border-color: rgba(76, 227, 247, 0.6);
+      }
+    }
+  }
+
+  &__links {
+    &__label {
+      font-size: clamp(0.65rem, 0.9vw, 0.78rem);
+      color: var(--text-muted, #696c84);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      font-weight: 600;
+      display: block;
+      margin-bottom: 1rem;
+    }
+
+    &__list {
       display: flex;
-      flex-wrap: wrap;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
 
-      gap: 1em;
-      margin-top: 1em;
+    &__item {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 0.9em 1.1em;
+      border-radius: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      background: rgba(255, 255, 255, 0.02);
+      color: rgba(255, 255, 255, 0.7);
+      transition: all 0.25s ease;
+      cursor: pointer;
 
-      i {
-        margin-right: 10px;
+      &:hover {
+        background: rgba(89, 24, 223, 0.1);
+        border-color: rgba(89, 24, 223, 0.25);
+        color: #fff;
+
+        .social__links__item__icon {
+          background: rgba(89, 24, 223, 0.25);
+
+          i {
+            color: var(--blue-end, #4ce3f7);
+          }
+        }
+
+        .social__links__item__arrow {
+          transform: translateX(4px);
+          color: var(--blue-end, #4ce3f7);
+        }
       }
 
-      a {
-        display: inline-block;
-        width: 200px;
-        color: #5918df;
-        text-decoration: none;
-        font-size: calc(0.5rem + 1vw);
-        font-weight: 600;
-        transition: all 0.3s ease;
+      &__icon {
+        width: 2.4em;
+        height: 2.4em;
+        border-radius: 8px;
+        background: rgba(89, 24, 223, 0.12);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        transition: background 0.25s ease;
 
-        &:hover {
-          color: #fff;
+        i {
+          font-size: 1.1em;
+          color: var(--purple, #5918df);
+          transition: color 0.25s ease;
         }
+      }
+
+      &__info {
+        display: flex;
+        flex-direction: column;
+        gap: 0.15em;
+        flex: 1;
+
+        .name {
+          font-size: clamp(0.82rem, 1.1vw, 0.92rem);
+          font-weight: 600;
+        }
+
+        .handle {
+          font-size: clamp(0.68rem, 0.9vw, 0.76rem);
+          color: var(--text-muted, #696c84);
+        }
+      }
+
+      &__arrow {
+        font-size: 0.75rem;
+        color: rgba(255, 255, 255, 0.2);
+        transition: transform 0.25s ease, color 0.25s ease;
+        flex-shrink: 0;
       }
     }
   }
@@ -47,15 +156,19 @@
 
 @media (max-width: 768px) {
   .social {
-    padding: 2em 0;
+    padding-top: 0.5rem;
 
-    .links {
-      div {
-        gap: 3em;
-        a {
-          width: auto;
-          font-size: calc(0.8em + 1vw);
-        }
+    h2 {
+      font-size: clamp(1.8rem, 9vw, 2.8rem);
+    }
+
+    &__description {
+      max-width: 100%;
+    }
+
+    &__links {
+      &__list {
+        gap: 0.5rem;
       }
     }
   }

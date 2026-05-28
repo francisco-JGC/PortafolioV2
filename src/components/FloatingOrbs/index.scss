@@ -1,0 +1,77 @@
+.orbs {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.orb {
+  position: absolute;
+  border-radius: 50%;
+  will-change: transform;
+
+  &--1 {
+    width: clamp(320px, 42vw, 620px);
+    height: clamp(320px, 42vw, 620px);
+    background: radial-gradient(circle at 40% 40%, rgba(89, 24, 223, 0.14) 0%, transparent 65%);
+    filter: blur(70px);
+    top: -20%;
+    right: 3%;
+    animation: orbFloat1 14s ease-in-out infinite;
+  }
+
+  &--2 {
+    width: clamp(240px, 30vw, 460px);
+    height: clamp(240px, 30vw, 460px);
+    background: radial-gradient(circle at 60% 60%, rgba(4, 0, 255, 0.09) 0%, transparent 65%);
+    filter: blur(90px);
+    bottom: 5%;
+    left: -8%;
+    animation: orbFloat2 18s ease-in-out infinite;
+  }
+
+  &--3 {
+    width: clamp(180px, 22vw, 340px);
+    height: clamp(180px, 22vw, 340px);
+    background: radial-gradient(circle at 50% 50%, rgba(76, 227, 247, 0.07) 0%, transparent 65%);
+    filter: blur(80px);
+    top: 30%;
+    left: 42%;
+    animation: orbFloat3 22s ease-in-out infinite;
+  }
+
+  &--4 {
+    width: clamp(140px, 16vw, 240px);
+    height: clamp(140px, 16vw, 240px);
+    background: radial-gradient(circle at 50% 50%, rgba(89, 24, 223, 0.07) 0%, transparent 65%);
+    filter: blur(60px);
+    top: 55%;
+    right: 18%;
+    animation: orbFloat4 16s ease-in-out infinite 3s;
+  }
+}
+
+@keyframes orbFloat1 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  30%       { transform: translate(-24px, 18px) scale(1.04); }
+  65%       { transform: translate(18px, -22px) scale(0.97); }
+}
+
+@keyframes orbFloat2 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  40%       { transform: translate(20px, -16px) scale(1.06); }
+  70%       { transform: translate(-14px, 20px) scale(0.95); }
+}
+
+@keyframes orbFloat3 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  25%       { transform: translate(16px, 12px) scale(1.03); }
+  55%       { transform: translate(-12px, -18px) scale(0.97); }
+  80%       { transform: translate(10px, 8px) scale(1.02); }
+}
+
+@keyframes orbFloat4 {
+  0%, 100% { transform: translate(0, 0); }
+  50%       { transform: translate(-18px, -14px); }
+}

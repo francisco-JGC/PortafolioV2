@@ -1,42 +1,42 @@
-import { motion } from 'framer-motion'
+import { AnimatePresence, motion } from 'framer-motion'
 import { useState } from 'react'
 import './index.scss'
 
 export const Info = () => {
-  const [showInfo, setShowInfo] = useState(true)
-
-  const toggleInfo = () => {
-    setShowInfo(!showInfo)
-  }
+  const [isOpen, setIsOpen] = useState(false)
 
   return (
     <div
-      className={`info ${!showInfo && 'show'}`}
-      onClick={toggleInfo}
-      style={{
-        backgroundColor: !showInfo && '#1a1527'
-      }}
+      className={`info${isOpen ? ' info--open' : ''}`}
+      onClick={() => setIsOpen((v) => !v)}
     >
-      <span>Información</span>
-      <br />
-      <motion.div
-        className={` ${showInfo && 'info-container'}`}
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.5 }}
-      >
-        <p>
-          <strong>+3</strong> años de experiencia como Full stack Front-end
-          Developer. Cuento con conocimientos solidos en el desarrollo Front-End
-          de <strong>React.js, Next.js, ES6+, HTML, CSS3</strong> Sólida
-          comprensión en los principios de diseño, <strong>UI/ UX</strong>, CSS
-          Avanzado <strong>(CSS Modules - Sass)</strong> y diseño responsivo.
-          Desarrollo Back-End utilizando{' '}
-          <strong>Nest.js, Node.js y Express</strong>, manejo de base de datos
-          relacionales y no relacionales como lo son
-          <strong>MySQL, PostgresSQL, y SQL SERVER.</strong>
-        </p>
-      </motion.div>
+      <div className="info__badge">
+        <span>Información</span>
+        <i className={`fas fa-chevron-${isOpen ? 'down' : 'up'}`} />
+      </div>
+
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            className="info__content"
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: 'auto' }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.3, ease: 'easeInOut' }}
+            style={{ overflow: 'hidden' }}
+          >
+            <p>
+              <strong>+4</strong> años como Full-Stack Developer con foco en{' '}
+              <strong>Backend (NestJS, Node.js, Express)</strong> y frontend{' '}
+              <strong>(React, Next.js)</strong>. Experiencia en arquitectura de{' '}
+              plataformas fintech, <strong>bots de IA con ChatGPT API</strong>,{' '}
+              <strong>Azure Speech / Speech Recognition</strong>, sistemas ERP,{' '}
+              <strong>WebSockets</strong>, despliegue en <strong>GCP / Nginx</strong>{' '}
+              y CI/CD. Herramientas: <strong>Claude Code, Cursor, Gemini</strong>.
+            </p>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   )
 }

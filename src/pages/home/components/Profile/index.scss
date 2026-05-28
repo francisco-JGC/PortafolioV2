@@ -1,131 +1,136 @@
 .profile {
   display: inline-flex;
   flex-direction: column;
-  gap: 1em;
-  padding: 1em 2em;
+  gap: 1.5em;
+  padding: 1em 0;
   position: relative;
-  margin-top: 3em;
 
   small {
-    margin-top: -1em;
-    margin-bottom: 1em;
-    font-size: calc(0.3rem + 1vw);
-    color: #696c84;
-    top: 0;
-    font-family: 'Roboto', sans-serif;
+    font-size: clamp(0.65rem, 1vw, 0.85rem);
+    color: var(--purple, #5918df);
+    letter-spacing: 0.1em;
+    font-weight: 600;
+    text-transform: uppercase;
   }
 
   &__data {
     display: flex;
     flex-direction: column;
-    position: relative;
     gap: 0.8em;
-    padding: 1em 0;
+    padding: 0.5em 0;
 
     &__name {
-      font-size: calc(1.3rem + 1vw);
       font-weight: 700;
-      position: relative;
 
       p {
         display: flex;
         flex-direction: column;
-        gap: 0.3em;
+        gap: 0.5em;
 
-        span:first-child span {
-          color: #5918df;
+        span:first-child {
+          font-size: clamp(1.5rem, 3.8vw, 3.4rem);
+          line-height: 1.15;
+
+          span {
+            background: linear-gradient(135deg, #7b4ef0, #4ce3f7);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+          }
         }
 
         span:nth-child(2) {
-          font-size: calc(0.8rem + 1vw);
+          font-size: clamp(1rem, 2.5vw, 2.1rem);
+          font-weight: 400;
+          color: rgba(255, 255, 255, 0.88);
+          line-height: 1.3;
 
-          span {
-            font-weight: 400;
-            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
-              'Lucida Sans', Arial, sans-serif;
+          .role-type {
+            background: linear-gradient(135deg, #7b4ef0, #4ce3f7);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 600;
+          }
+
+          .role-cursor {
+            display: inline-block;
+            -webkit-text-fill-color: var(--purple, #5918df);
+            color: var(--purple, #5918df);
+            margin-left: 2px;
+            animation: blink 0.9s step-end infinite;
+            font-weight: 300;
           }
         }
       }
     }
 
     &__ocupation {
-      font-size: calc(0.5rem + 1vw);
-      position: relative;
-      margin-top: 1em;
+      font-size: clamp(0.8rem, 1.3vw, 1.05rem);
+      margin-top: 0.4em;
 
       span {
-        color: #696c84;
+        color: var(--text-muted, #696c84);
+        position: relative;
+
+        &::after {
+          content: '|';
+          animation: blink 1.1s step-end infinite;
+          margin-left: 3px;
+          color: var(--purple, #5918df);
+        }
       }
     }
   }
 
   &__contact {
-    margin-top: 1em;
-    position: relative;
-    font-size: calc(0.01rem + 1vw);
-    .contact,
-    .CV {
-      border: 2px solid #fff;
-      border-radius: 20px;
-      padding: 0.5em 1em;
-      transition: all 0.3s ease-in-out;
+    margin-top: 1.5em;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+}
 
-      &:hover {
-        background: #fff;
-        span {
-          color: #000;
-        }
-      }
-    }
-
-    .CV {
-      margin-left: 1em;
-    }
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
   }
 }
 
 @media (max-width: 768px) {
   .profile {
-    padding: 1em 0;
-    gap: 1em;
-    margin-left: 4.5em;
-    margin-top: 0;
+    padding: 0.5em 0;
 
     small {
-      font-size: calc(1rem + 1vw);
-      margin: 0;
+      font-size: clamp(0.7rem, 3vw, 0.85rem);
     }
 
     &__data {
-      gap: 0.5em;
-      margin-top: 3em;
+      gap: 0.7em;
 
-      &__name {
-        font-size: calc(1.8rem + 1vw);
+      &__name p {
+        span:first-child {
+          font-size: clamp(1.8rem, 8vw, 2.6rem);
+        }
 
-        p {
-          span:nth-child(2) {
-            margin-top: 1em;
-            font-size: calc(1rem + 1vw);
-          }
+        span:nth-child(2) {
+          font-size: clamp(1rem, 5vw, 1.5rem);
+          margin-top: 0.3em;
         }
       }
 
       &__ocupation {
-        font-size: calc(0.8rem + 1vw);
+        font-size: clamp(0.8rem, 3.5vw, 1rem);
       }
     }
 
     &__contact {
-      margin-top: 10em;
-      span {
-        font-size: calc(0.8rem + 1vw);
-      }
-
-      .contact,
-      .CV {
-        padding: 0.5em 0.5em;
-      }
+      margin-top: 2.5em;
     }
   }
 }

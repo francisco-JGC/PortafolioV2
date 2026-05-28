@@ -4,23 +4,24 @@ import './index.scss'
 
 const variants = {
   hidden: {
-    y: '-100vh',
-    opacity: 0
+    scale: 0.9,
+    opacity: 0,
+    y: 30
   },
   visible: {
+    scale: 1,
     opacity: 1,
     y: 0,
     transition: {
-      delay: 0.1,
-      duration: 0.5,
-      type: 'spring',
-      stiffness: 500,
-      damping: 25
+      duration: 0.4,
+      ease: [0.25, 0.46, 0.45, 0.94]
     }
   },
   exit: {
-    y: '100vh',
-    opacity: 0
+    scale: 0.92,
+    opacity: 0,
+    y: 20,
+    transition: { duration: 0.25, ease: 'easeIn' }
   }
 }
 
@@ -29,7 +30,7 @@ export const Modal = ({ handleClose, children }) => {
     <Backdrop onClick={handleClose}>
       <motion.div
         onClick={(e) => e.stopPropagation()}
-        className="modal orange-gradient"
+        className="modal"
         variants={variants}
         initial="hidden"
         animate="visible"

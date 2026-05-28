@@ -1,208 +1,142 @@
 .project-pages__container__item {
-  width: 500px;
-  height: 320px;
+  width: clamp(220px, 34vw, 520px);
+  height: clamp(140px, 21vw, 320px);
   position: relative;
   cursor: pointer;
-  transform-style: preserve-3d;
+  border-radius: 14px;
+  overflow: hidden;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s ease;
 
   &:hover {
-    .project-pages__container__item__image {
-      transform: scale(1.15);
-      filter: drop-shadow(0 0 0.75rem #000);
+    transform: translateY(-4px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(89, 24, 223, 0.2);
+
+    .project-pages__container__item__image img {
+      transform: scale(1.07);
+      filter: brightness(45%);
+    }
+
+    .project-pages__container__item__overlay {
+      opacity: 1;
     }
   }
 
   &:active {
-    .project-pages__container__item__image {
-      transform: scale(0.8);
-    }
+    transform: scale(0.97) translateY(0);
   }
 
   &__image {
     width: 100%;
     height: 100%;
-    transform: scale(1.1);
-    transition: all 0.3s ease-in-out;
+    position: absolute;
+    inset: 0;
 
     img {
       width: 100%;
       height: 100%;
-      object-fit: contain;
-      position: relative;
-      filter: brightness(70%);
+      object-fit: cover;
+      object-position: center top;
+      filter: brightness(60%);
+      transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1), filter 0.5s ease;
     }
   }
 
   &__overlay {
     position: absolute;
-    top: 6%;
-    left: -5em;
-    width: 100%;
-    height: 87%;
+    inset: 0;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    padding: 0 1em;
-    width: 30%;
+    justify-content: flex-end;
+    padding: 1.4em 1.5em;
+    background: linear-gradient(
+      0deg,
+      rgba(14, 13, 16, 0.92) 0%,
+      rgba(14, 13, 16, 0.55) 45%,
+      transparent 100%
+    );
+    opacity: 0.8;
+    transition: opacity 0.35s ease;
 
     .name {
       color: #fff !important;
-      font-weight: 600;
-      display: inline;
-
-      &:nth-child(1) {
-        font-size: calc(0.7rem + 1vw);
-        padding-bottom: 0.5em;
-        border-bottom: 3px solid #fff;
-        position: relative;
-        z-index: 10;
-        filter: none !important;
-      }
+      font-weight: 700;
+      font-size: clamp(0.8rem, 1.5vw, 1.15rem);
+      display: block;
+      margin-bottom: 0.5em;
+      line-height: 1.2;
     }
+
     .project-pages__container__item__shadow {
-      content: '';
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgb(0, 0, 0, 0.5);
-      filter: blur(2em);
-      z-index: 1;
+      display: none;
     }
 
-    div {
+    > div {
+      display: flex;
+      align-items: center;
+      gap: 0.4em;
+
       span,
       i {
-        font-size: calc(0.3rem + 1vw);
+        font-size: clamp(0.6rem, 1vw, 0.85rem);
         font-weight: 600;
-        transition: all 0.3s ease-in-out;
-      }
-      i {
-        margin-top: 0.3em;
-      }
-
-      span {
-        margin: 0;
+        color: rgba(255, 255, 255, 0.6);
+        transition: all 0.3s ease;
       }
     }
   }
 
-  &:hover &__overlay div i {
+  &:hover &__overlay > div i {
     transform: translateX(0.5em);
+    color: var(--blue-end, #4ce3f7);
+  }
+
+  &:hover &__overlay > div span {
+    color: rgba(255, 255, 255, 0.9);
   }
 }
 
 .vertical {
-  height: 315px;
-  width: 280px;
-
-  .project-pages__container__item__image__shadow {
-    top: 0;
-    height: 100%;
-  }
+  height: clamp(200px, 30vw, 380px);
+  width: clamp(155px, 22vw, 290px);
 }
 
-@media screen and (max-width: 1250px) {
+@media screen and (max-width: 1100px) {
   .project-pages__container__item {
-    width: 310px;
-    height: 180px;
-    justify-content: space-between;
+    width: clamp(200px, 30vw, 380px);
+    height: clamp(130px, 19vw, 250px);
   }
 
   .vertical {
-    width: 240px;
-    height: 300px;
-  }
-}
-
-@media screen and (max-width: 1050px) {
-  .project-pages__container__item {
-    width: 260px;
-    height: 150px;
-    justify-content: space-between;
-  }
-
-  .vertical {
-    width: 200px;
-    height: 250px;
-  }
-}
-
-@media screen and (max-width: 950px) {
-  .project-pages__container__item {
-    width: 220px;
-    height: 130px;
-    justify-content: space-between;
-
-    &__image {
-      img {
-      }
-    }
-  }
-
-  .vertical {
-    width: 180px;
-    height: 225px;
-  }
-}
-
-@media screen and (max-width: 870px) {
-  .project-pages__container__item {
-    width: 200px;
-    height: 120px;
-    justify-content: space-between;
-    margin: 2em !important;
-  }
-
-  .vertical {
-    width: 160px;
-    height: 200px;
+    width: clamp(150px, 20vw, 250px);
+    height: clamp(190px, 28vw, 320px);
   }
 }
 
 @media screen and (max-width: 768px) {
   .project-pages__container__item {
-    width: 410px;
-    height: 230px;
-    margin: 0 0 0 5em !important;
-
-    &__overlay {
-      div {
-        span,
-        i {
-          font-size: calc(0.6rem + 1vw);
-        }
-      }
-    }
+    width: clamp(260px, 82vw, 420px) !important;
+    height: clamp(160px, 52vw, 270px) !important;
+    align-self: center !important;
+    margin: 0 !important;
   }
+
   .vertical {
-    width: 280px;
-    height: 315px;
-    margin: 0 0 0 3em !important;
-  }
-
-  .project-pages__container__item {
+    width: clamp(200px, 65vw, 320px) !important;
+    height: clamp(230px, 82vw, 380px) !important;
+    align-self: center !important;
+    margin: 0 !important;
   }
 }
 
-@media screen and (max-width: 520px) {
+@media screen and (max-width: 480px) {
   .project-pages__container__item {
-    width: 200px;
-    height: 120px;
-
-    &__overlay {
-      div {
-        span,
-        i {
-          font-size: calc(0.6rem + 1vw);
-        }
-      }
-    }
+    width: 90vw !important;
+    height: clamp(150px, 56vw, 240px) !important;
   }
+
   .vertical {
-    width: 160px;
-    height: 225px;
+    width: 70vw !important;
+    height: clamp(200px, 88vw, 350px) !important;
   }
 }

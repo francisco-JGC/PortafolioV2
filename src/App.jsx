@@ -1,37 +1,56 @@
+import { useEffect, useState } from 'react'
+import { AnimatePresence } from 'framer-motion'
 import { ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 
 import AOS from 'aos'
-import 'aos/dist/aos.css' // You can also use <link> for styles
+import 'aos/dist/aos.css'
 import './App.scss'
 
+import { CustomCursor }   from './components/CustomCursor'
 import { DescNavigation } from './components/DescNavigation'
-import { Header } from './components/Header'
-import { Info } from './components/Info'
-import { Layout } from './components/Layout'
-import { AboutPage } from './pages/about'
-import { ContactPage } from './pages/contact'
-import { HomePage } from './pages/home'
-import { ProjectPages } from './pages/projects'
-import { ServicePages } from './pages/services'
+import { Header }         from './components/Header'
+import { Info }           from './components/Info'
+import { Layout }         from './components/Layout'
+import { LoadingScreen }  from './components/LoadingScreen'
+import { ScrollProgress } from './components/ScrollProgress'
+import { AboutPage }      from './pages/about'
+import { ContactPage }    from './pages/contact'
+import { HomePage }       from './pages/home'
+import { ProjectPages }   from './pages/projects'
+import { ServicePages }   from './pages/services'
 
 const App = () => {
-  AOS.init()
+  const [loaded, setLoaded] = useState(false)
+
+  useEffect(() => {
+    AOS.init({ once: true, offset: 60, easing: 'ease-out-cubic' })
+  }, [])
 
   return (
     <div className="App">
-      <Header />
+      <CustomCursor />
+      <ScrollProgress />
 
-      <Layout>
-        <HomePage />
-        <ProjectPages />
-        <AboutPage />
-        {/* <ServicePages /> */}
-        <ContactPage />
-      </Layout>
+      <AnimatePresence>
+        {!loaded && <LoadingScreen onDone={() => setLoaded(true)} />}
+      </AnimatePresence>
 
-      <DescNavigation />
-      <Info />
+      {loaded && (
+        <>
+          <Header />
+          <Layout>
+            <HomePage />
+            <ProjectPages />
+            <ServicePages />
+            <AboutPage />
+            <ContactPage />
+          </Layout>
+          <DescNavigation />
+          <Info />
+        </>
+      )}
+
       <ToastContainer style={{ fontSize: '.9em' }} />
     </div>
   )

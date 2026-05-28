@@ -1,0 +1,58 @@
+.loading-screen {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  background: var(--bg-dark, #14121c);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.8rem;
+  }
+
+  &__logo {
+    display: flex;
+    align-items: baseline;
+    gap: 0.18em;
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+
+    .logo-first {
+      color: #fff;
+    }
+
+    .logo-second {
+      background: linear-gradient(135deg, var(--purple, #5918df), var(--blue-end, #4ce3f7));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+  }
+
+  &__bar-wrap {
+    width: clamp(160px, 28vw, 280px);
+    height: 2px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 2px;
+    overflow: hidden;
+  }
+
+  &__bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--blue-start, #0400ff), var(--purple, #5918df), var(--blue-end, #4ce3f7));
+    border-radius: 2px;
+  }
+
+  p {
+    font-size: clamp(0.65rem, 1vw, 0.75rem);
+    color: var(--text-muted, #696c84);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+}

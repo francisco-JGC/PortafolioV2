@@ -1,26 +1,20 @@
 .about-page {
-  background: #14121c;
+  background: var(--bg-dark, #14121c);
   min-height: 110vh;
-  padding: 0 0 0 15em;
+  padding: 0 var(--page-right) 4rem var(--page-left);
   width: 100%;
   margin: 0;
   position: relative;
+  overflow-x: hidden;
 
   &::before {
     content: '';
     position: absolute;
     bottom: 0;
-    background: linear-gradient(0deg, #0e0d10, transparent);
+    background: linear-gradient(0deg, var(--bg-contact, #0e0d10), transparent);
     width: 100%;
     left: 0;
-    height: 2em;
-  }
-}
-
-@media (max-width: 768px) {
-  .about-page {
-    padding: 0;
-    min-width: 100vw;
-    min-height: 100vh;
+    height: 3em;
+    pointer-events: none;
   }
 }
